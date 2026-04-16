@@ -222,6 +222,7 @@ const scaleIn: Variants = {
     },
   },
 };
+
 type SectionIntroProps = {
   eyebrow: string;
   title: string;
