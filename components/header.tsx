@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,12 +20,19 @@ export default function Header() {
 
   const isActive = (href: string) => pathname === href;
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
-
         {/* Logo */}
-        <Link href="/" className="relative h-10 w-28 md:h-12 md:w-36">
+        <Link
+          href="/"
+          aria-label="eLive Home"
+          className="relative block h-10 w-28 shrink-0 md:h-12 md:w-36"
+        >
           <Image
             src="/logo.png"
             alt="eLive logo"
@@ -49,8 +56,6 @@ export default function Header() {
               }`}
             >
               {link.label}
-
-              {/* underline indicator */}
               {isActive(link.href) && (
                 <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-[#F39A1F]" />
               )}
@@ -62,7 +67,7 @@ export default function Header() {
         <div className="hidden lg:flex">
           <Link
             href="/contact"
-            className="rounded-full bg-[#F39A1F] px-5 py-3 text-sm font-semibold text-white hover:bg-[#E68613]"
+            className="rounded-full bg-[#F39A1F] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#E68613]"
           >
             Request a Quote
           </Link>
@@ -70,44 +75,47 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          onClick={() => setOpen(!open)}
-          className="lg:hidden"
+          type="button"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((prev) => !prev)}
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-[#24324A] shadow-sm transition hover:border-[#F39A1F] hover:text-[#F39A1F] lg:hidden"
         >
-          {open ? <X size={26} /> : <Menu size={26} />}
+          {open ? <X size={22} strokeWidth={2.2} /> : <Menu size={22} strokeWidth={2.2} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden border-t border-slate-200 bg-white">
-    <nav className="flex flex-col gap-2 px-4 py-6">
-  {navLinks.map((link) => {
-    const active = isActive(link.href);
+        <div className="border-t border-slate-200 bg-white lg:hidden">
+          <nav className="flex flex-col gap-2 px-4 py-6">
+            {navLinks.map((link) => {
+              const active = isActive(link.href);
 
-    return (
-      <Link
-        key={link.href}
-        href={link.href}
-        onClick={() => setOpen(false)}
-        className={`rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 ${
-          active
-            ? "bg-[#F39A1F] text-white shadow-md"
-            : "text-[#24324A] hover:bg-[#F7F8FA] hover:text-[#F39A1F]"
-        }`}
-      >
-        {link.label}
-      </Link>
-    );
-  })}
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className={`rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 ${
+                    active
+                      ? "bg-[#F39A1F] text-white shadow-md"
+                      : "text-[#24324A] hover:bg-[#F7F8FA] hover:text-[#F39A1F]"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
 
-  <Link
-    href="/contact"
-    onClick={() => setOpen(false)}
-    className="mt-4 rounded-full bg-[#F39A1F] px-5 py-3 text-center text-sm font-semibold text-white"
-  >
-    Request a Quote
-  </Link>
-</nav>
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-4 rounded-full bg-[#F39A1F] px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#E68613]"
+            >
+              Request a Quote
+            </Link>
+          </nav>
         </div>
       )}
     </header>
