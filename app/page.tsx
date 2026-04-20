@@ -10,11 +10,9 @@ import {
   CheckCircle2,
   Megaphone,
   MonitorPlay,
-  Palette,
   PhoneCall,
   Printer,
   QrCode,
-  Sparkles,
   Users,
   Mail,
   MapPin,
@@ -23,170 +21,150 @@ import {
 
 const serviceHighlights = [
   {
-    title: "Bulk SMS",
-    desc: "Promotions, alerts, reminders, awareness campaigns, and customer notifications.",
+    title: "Communication Solutions",
+    desc: "Bulk SMS, WhatsApp communication, alerts, reminders, and campaign delivery for modern organizations.",
     icon: Megaphone,
   },
   {
-    title: "Event Attendee Management",
-    desc: "Invitations, registrations, RSVP handling, QR scanning, ticket delivery, and analytics.",
+    title: "Event Management",
+    desc: "Invitations, RSVP handling, attendee tracking, QR check-in, ticketing, and event coordination tools.",
     icon: Users,
   },
   {
-    title: "Creative Design",
-    desc: "Graphics, website design, motion graphics, brand identity, and 3D design services.",
-    icon: Palette,
-  },
-  {
-    title: "Multimedia Solutions",
-    desc: "Live streaming, videography, photography, projection, digital marketing, and TV & LED rental.",
+    title: "Multimedia Production",
+    desc: "Live streaming, videography, photography, projection, and display support for high-impact events.",
     icon: MonitorPlay,
   },
   {
-    title: "Printing & Branding",
-    desc: "Digital printing, offset printing, signage, office branding, and promotional products.",
+    title: "Branding & Printing",
+    desc: "Corporate branding, signage, promotional materials, and print execution that strengthen visibility.",
     icon: Printer,
   },
 ];
 
 const stats = [
-  { value: "3,945+", label: "Attendees Managed" },
-  { value: "25+", label: "Events Supported" },
-  { value: "6", label: "Core Service Areas" },
-  { value: "100%", label: "Client-Focused Delivery" },
+  { value: "3,900+", label: "Attendees Successfully Managed" },
+  { value: "25+", label: "Events Delivered" },
+  { value: "4", label: "Core Solution Areas" },
+  { value: "100%", label: "Commitment to Client Success" },
 ];
 
 const trustedBy = [
+  "Businesses",
   "Corporate Events",
-  "Brands",
-  "NGOs",
-  "Churches",
-  "Associations",
   "Institutions",
+  "Associations",
+  "Churches",
+  "NGOs",
 ];
 
 const whyChooseUs = [
   {
-    title: "All-in-One Support",
-    desc: "Communication, event operations, branding, printing, and media support under one trusted partner.",
+    title: "End-to-End Solutions",
+    desc: "From communication to branding and event execution, we provide integrated support under one trusted partner.",
     icon: BadgeCheck,
   },
   {
-    title: "Modern Messaging",
-    desc: "Connect with customers and attendees through SMS, WhatsApp, and digital invitation workflows.",
+    title: "Smart Communication",
+    desc: "Reach your audience through SMS, WhatsApp, digital invitations, reminders, and structured engagement flows.",
     icon: PhoneCall,
   },
   {
-    title: "Operational Efficiency",
-    desc: "Use QR check-in, attendee tracking, alerts, and post-event analytics to simplify coordination.",
-    icon: QrCode,
+    title: "Reliable Execution",
+    desc: "We combine planning, creativity, and operational discipline to deliver smooth and professional experiences.",
+    icon: CheckCircle2,
   },
   {
-    title: "Creative + Technical",
-    desc: "We blend creativity, technology, and strategy to help your brand communicate with clarity and impact.",
-    icon: Sparkles,
+    title: "Operational Control",
+    desc: "Use QR verification, attendee visibility, alerts, and reporting to improve coordination and performance.",
+    icon: QrCode,
   },
 ];
 
 const featuredServices = [
   {
     title: "Event Attendee Management",
-    desc: "Manage registrations, invitations, RSVPs, QR verification, check-ins, and detailed attendee reporting for different event types.",
+    desc: "Manage invitations, guest registration, RSVP flows, QR verification, check-ins, and attendee reporting.",
     image: "/service-1.jpg",
   },
   {
     title: "Bulk SMS Platform",
-    desc: "Launch promotions, reminders, alerts, customer notifications, and awareness campaigns from one reliable messaging solution.",
+    desc: "Run promotions, reminders, alerts, service notifications, and awareness campaigns from one reliable platform.",
     image: "/service-2.jpg",
   },
   {
-    title: "Multimedia & Coverage",
-    desc: "Professional live streaming, photography, videography, projection, and digital media support for memorable events.",
+    title: "Media & Brand Support",
+    desc: "Strengthen your event or business presence with multimedia coverage, design, branding, and print delivery.",
     image: "/service-3.jpg",
   },
 ];
 
 const platformFeatures = [
-  "Smart campaign scheduling and delivery",
-  "Personalized SMS and WhatsApp messaging",
-  "Digital invitations and RSVP management",
-  "QR-based ticketing and check-in system",
-  "Real-time attendee tracking and analytics",
-  "Automated reminders and attendee follow-ups",
+  "Campaign scheduling and message delivery",
+  "Digital invitations and RSVP workflows",
+  "QR-based ticketing and attendee check-in",
+  "Real-time attendee visibility and coordination",
+  "Automated reminders and notifications",
+  "Post-event reporting and performance tracking",
 ];
 
 const processSteps = [
   {
     step: "01",
-    title: "Plan Your Campaign or Event",
-    desc: "Tell us what you want to launch, promote, or manage and we help shape the best communication approach.",
+    title: "Understand the Need",
+    desc: "We assess your campaign, event, or brand objective and define the most practical communication approach.",
   },
   {
     step: "02",
-    title: "Set Up Contacts or Attendees",
-    desc: "Upload your audience, organize ticketing or attendance flow, and prepare messaging and event assets.",
+    title: "Set Up the Workflow",
+    desc: "We organize your audience, event flow, messaging assets, and support materials for execution.",
   },
   {
     step: "03",
-    title: "Launch and Engage",
-    desc: "Send invitations, alerts, reminders, or promotional messages through the right channels at the right time.",
+    title: "Launch and Manage",
+    desc: "We deliver communication, attendee handling, or brand support through the right channels at the right time.",
   },
   {
     step: "04",
     title: "Track and Improve",
-    desc: "Measure attendance, delivery performance, engagement, and post-event insights to improve future results.",
+    desc: "We review attendance, delivery, and engagement outcomes to support better future performance.",
   },
 ];
 
 const solutions = [
   {
     title: "eLive SMS",
-    desc: "A practical messaging solution for promotions, reminders, awareness campaigns, service notifications, and customer engagement.",
+    desc: "A practical bulk messaging solution for promotions, alerts, reminders, notifications, and audience engagement.",
   },
   {
     title: "eLive Card",
-    desc: "A smart invitation and attendee workflow with digital cards, RSVP support, ticket flow, and QR-based verification.",
+    desc: "A digital invitation and attendee workflow with RSVP support, ticketing flow, and QR-based verification.",
   },
   {
     title: "WhatsApp Communication",
-    desc: "Direct updates, invitations, customer support, and fast two-way communication through modern messaging channels.",
+    desc: "Direct business and event communication for updates, support, follow-ups, and personalized engagement.",
   },
   {
-    title: "Creative & Brand Execution",
-    desc: "Design, branding, media production, and print support that strengthen visibility before, during, and after your event.",
+    title: "Live Media Support",
+    desc: "Live streaming, photography, videography, and on-site media support for memorable event experiences.",
   },
 ];
 
 const portfolio = [
   {
     title: "Corporate Events",
-    desc: "Structured attendee handling, communication support, branding, and media coordination for professional events.",
+    desc: "Professional attendee handling, communication support, branding, and media coordination for organized events.",
     image: "/portfolio-1.jpg",
   },
   {
     title: "Social & Wedding Events",
-    desc: "Elegant digital invitations, RSVP handling, guest communication, and memorable event presentation support.",
+    desc: "Elegant invitations, RSVP coordination, guest engagement, and event presentation support.",
     image: "/portfolio-2.jpg",
   },
   {
-    title: "Branding & Printing Projects",
-    desc: "Signage, office branding, labels, catalogues, stationery, apparel, and promotional product execution.",
+    title: "Branding & Print Projects",
+    desc: "Signage, office branding, labels, stationery, apparel, and promotional material execution.",
     image: "/portfolio-3.jpg",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "eLive helped us coordinate our event communication smoothly and professionally from invitation to attendance tracking.",
-    name: "Corporate Client",
-    role: "Event Organizer",
-  },
-  {
-    quote:
-      "Their messaging and branding support made our campaign feel organized, modern, and easy for our audience to follow.",
-    name: "Business Client",
-    role: "Marketing Team",
   },
 ];
 
@@ -212,12 +190,12 @@ const staggerContainer: Variants = {
 };
 
 const scaleIn: Variants = {
-  hidden: { opacity: 0, scale: 0.92 },
+  hidden: { opacity: 0, scale: 0.94 },
   visible: {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.55,
+      duration: 0.5,
       ease: [0.22, 1, 0.36, 1] as any,
     },
   },
@@ -247,7 +225,7 @@ function SectionIntro({
       <p
         className={`text-sm font-bold uppercase tracking-[0.22em] md:text-[15px] ${
           light
-            ? "text-[var(--color-elive-accent)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.22)]"
+            ? "!text-[var(--color-elive-accent)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.22)]"
             : "text-[var(--color-elive-accent)]"
         }`}
       >
@@ -330,7 +308,7 @@ export default function HomePage() {
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
       <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.2)]">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -340,8 +318,8 @@ export default function HomePage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/70" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(243,154,31,0.10),transparent_26%)]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(243,154,31,0.08),transparent_26%)]" />
           </div>
 
           <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
@@ -355,21 +333,21 @@ export default function HomePage() {
                 variants={fadeUp}
                 className="text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.02]"
               >
-                <span className="block text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.22)]">
-                  Integrated Communication Solutions
+                <span className="block text-white">
+                  Helping Businesses and Events
                 </span>
-                <span className="mt-2 block text-[var(--color-elive-accent)] drop-shadow-[0_2px_12px_rgba(0,0,0,0.22)]">
-                  for Events and Businesses
+                <span className="mt-2 block text-[var(--color-elive-accent)]">
+                  Connect, Impress & Engage
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={fadeUp}
-                className="mt-6 max-w-2xl text-base leading-8 text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.18)] md:text-lg"
+                className="mt-6 max-w-2xl text-base leading-8 text-white/85 md:text-lg"
               >
-                Simplify messaging, attendee management, branding, and event
-                execution with one trusted partner built for modern
-                organizations.
+                We deliver communication, event, branding, and media solutions
+                that help organizations operate more professionally and engage
+                their audiences with confidence.
               </motion.p>
 
               <motion.div
@@ -378,17 +356,17 @@ export default function HomePage() {
               >
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-[#143066] shadow-[0_14px_34px_rgba(243,154,31,0.32)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white shadow-[0_14px_34px_rgba(243,154,31,0.26)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
                 >
                   Get Started
                   <ArrowRight size={18} />
                 </Link>
 
-                <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-8 py-4 text-base font-semibold text-white transition duration-300 hover:border-white hover:bg-white/12"
-                >
-                  View Services
+         <Link
+  href="/services"
+  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-8 py-4 text-base font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+>
+                  Explore Services
                 </Link>
               </motion.div>
             </motion.div>
@@ -397,7 +375,7 @@ export default function HomePage() {
 
         {/* QUICK HIGHLIGHTS */}
         <div className="mx-auto mt-8 max-w-7xl">
-          <StaggerGroup className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+          <StaggerGroup className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {serviceHighlights.map((card) => {
               const Icon = card.icon;
 
@@ -405,13 +383,11 @@ export default function HomePage() {
                 <motion.div
                   key={card.title}
                   variants={scaleIn}
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -6 }}
                   transition={{ duration: 0.25 }}
-                  className="group relative rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_24px_50px_rgba(15,35,76,0.14)]"
+                  className="group rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_20px_42px_rgba(15,35,76,0.12)]"
                 >
-                  <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[var(--color-elive-accent)] to-transparent opacity-0 transition group-hover:opacity-100" />
-
-                  <div className="inline-flex rounded-2xl bg-[#143066]/10 p-3 text-[#143066] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#143066] group-hover:text-white">
+                  <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066] transition-all duration-300 group-hover:bg-[#143066] group-hover:text-white">
                     <Icon size={20} />
                   </div>
 
@@ -446,74 +422,56 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      {/* WHO WE ARE */}
+      {/* ABOUT */}
       <section className="px-4 pb-16 pt-20 md:px-6 lg:px-8 lg:pb-24 lg:pt-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[0.46fr,1fr] lg:gap-12 lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.48fr,1fr] lg:gap-12 lg:items-start">
             <Reveal>
               <SectionIntro
                 eyebrow="About eLive"
-                title="Who We Are"
-                description="We help businesses and events communicate more clearly, present more professionally, and operate more efficiently through integrated messaging, branding, media, and attendee management solutions."
-                titleClassName="lg:text-[52px]"
+                title="Integrated Support for Communication, Events, and Brand Visibility"
+                description="We help businesses and events communicate clearly, execute professionally, and deliver better audience experiences."
               />
             </Reveal>
 
             <Reveal>
-              <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] p-7 text-white shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:mt-12 lg:p-12">
+              <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] p-7 shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
                 <div className="absolute inset-0 opacity-10">
                   <div className="absolute -right-12 top-0 h-40 w-40 rounded-full bg-white blur-3xl" />
                   <div className="absolute -left-10 bottom-0 h-44 w-44 rounded-full bg-[var(--color-elive-accent)] blur-3xl" />
                 </div>
 
-                <div className="relative">
-                  <div className="grid gap-5">
-                    <p className="text-base leading-8 text-white md:text-[17px]">
-                      At eLive, we deliver innovative communication and
-                      marketing solutions that help businesses and events
-                      connect, impress, and engage their audiences.
-                    </p>
+                <div className="relative grid gap-5">
+                  <p className="text-base leading-8 text-white md:text-[17px]">
+                    At eLive, we deliver communication and marketing solutions
+                    that help businesses and events connect, impress, and engage
+                    their audiences more effectively.
+                  </p>
 
-                    <p className="text-base leading-8 text-white md:text-[17px]">
-                      Our services include Bulk SMS, attendee management,
-                      creative design, multimedia support, printing, branding,
-                      and live streaming, giving clients one reliable partner
-                      for both communication and execution.
-                    </p>
+                  <p className="text-base leading-8 text-white/85 md:text-[17px]">
+                    Our strength lies in combining messaging, attendee
+                    management, branding, printing, and media support into one
+                    practical and coordinated service experience.
+                  </p>
 
-                    <p className="text-base leading-8 text-white md:text-[17px]">
-                      By combining creativity, technology, and strategy, we
-                      help organizations manage invitations, messaging, event
-                      experiences, branded materials, and audience engagement
-                      with greater clarity and consistency.
-                    </p>
-
-                    <p className="text-base leading-8 text-white md:text-[17px]">
-                      We do more than provide services. We build practical
-                      partnerships that support visibility, performance, and
-                      memorable brand experiences.
-                    </p>
-                  </div>
-
-                  <div className="mt-8 grid gap-4 border-t border-white/15 pt-8 sm:grid-cols-2">
-                    <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[0_10px_24px_rgba(0,0,0,0.16)] backdrop-blur">
+                  <div className="mt-4 grid gap-4 border-t border-white/15 pt-8 sm:grid-cols-2">
+                    <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur">
                       <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
                         What We Deliver
                       </p>
-                      <p className="mt-2 text-sm leading-7 text-white/95 md:text-[15px]">
-                        Messaging, event coordination, media support, branding,
-                        and print solutions designed to work together.
+                      <p className="mt-2 text-sm leading-7 text-white/90 md:text-[15px]">
+                        Smart communication, event coordination, and brand
+                        execution designed to work together.
                       </p>
                     </div>
 
-                    <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[0_10px_24px_rgba(0,0,0,0.16)] backdrop-blur">
+                    <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur">
                       <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
                         How We Work
                       </p>
-                      <p className="mt-2 text-sm leading-7 text-white/95 md:text-[15px]">
-                        We blend creativity, technology, and execution to help
-                        clients communicate with confidence and deliver stronger
-                        audience experiences.
+                      <p className="mt-2 text-sm leading-7 text-white/90 md:text-[15px]">
+                        We blend technology, creativity, and structure to support
+                        better delivery and stronger audience engagement.
                       </p>
                     </div>
                   </div>
@@ -531,7 +489,7 @@ export default function HomePage() {
             <SectionIntro
               eyebrow="Our Impact"
               title="Numbers That Reflect Real Delivery"
-              description="We support brands, campaigns, and events with practical solutions that improve communication, coordination, and audience experience."
+              description="We support campaigns, brands, and events with practical systems that improve communication, coordination, and presentation."
               align="center"
             />
           </Reveal>
@@ -541,10 +499,10 @@ export default function HomePage() {
               <motion.div
                 key={item.label}
                 variants={scaleIn}
-                whileHover={{ y: -6 }}
-                className="group rounded-[1.6rem] border border-slate-200 bg-white p-7 text-center shadow-[0_10px_24px_rgba(15,35,76,0.05)] transition-all duration-300 hover:shadow-[0_20px_40px_rgba(15,35,76,0.12)]"
+                whileHover={{ y: -5 }}
+                className="group rounded-[1.6rem] border border-slate-200 bg-white p-7 text-center shadow-[0_10px_24px_rgba(15,35,76,0.05)] transition-all duration-300 hover:shadow-[0_18px_36px_rgba(15,35,76,0.1)]"
               >
-                <div className="text-4xl font-black text-[#143066] transition-all duration-300 group-hover:scale-110 group-hover:text-[var(--color-elive-accent)] md:text-5xl">
+                <div className="text-4xl font-black text-[#143066] transition-all duration-300 group-hover:text-[var(--color-elive-accent)] md:text-5xl">
                   {item.value}
                 </div>
                 <p className="mt-2 text-sm font-medium text-slate-600 md:text-[15px]">
@@ -562,8 +520,8 @@ export default function HomePage() {
           <Reveal>
             <SectionIntro
               eyebrow="Why Choose eLive"
-              title="Built for Performance, Designed for Impact"
-              description="We combine communication tools, event operations, creativity, and technical execution to give businesses and organizers a more complete solution."
+              title="Built for Clarity, Reliability, and Impact"
+              description="We combine communication tools, event operations, and brand execution into one structured and dependable workflow."
               align="center"
             />
           </Reveal>
@@ -576,7 +534,7 @@ export default function HomePage() {
                 <motion.div
                   key={item.title}
                   variants={scaleIn}
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -6 }}
                   className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
                 >
                   <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
@@ -604,13 +562,13 @@ export default function HomePage() {
               <div>
                 <SectionIntro
                   eyebrow="Our Services"
-                  title="End-to-End Solutions Tailored to Your Goals"
-                  description="From communication and audience engagement to event execution, creative production, branding, and print delivery, eLive helps you build experiences that are organized, visible, and memorable."
+                  title="Practical Solutions Tailored to Your Goals"
+                  description="From audience communication to event support, branding, and execution, we help clients build experiences that are organized, visible, and memorable."
                 />
 
                 <Link
                   href="/services"
-                  className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#143066] to-[#2957A4] px-7 py-4 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(20,48,102,0.24)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(20,48,102,0.32)]"
+                  className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#143066] to-[#2957A4] px-7 py-4 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(20,48,102,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(20,48,102,0.28)]"
                 >
                   <span className="text-white">View All Services</span>
                   <ArrowRight
@@ -626,7 +584,7 @@ export default function HomePage() {
                 <motion.div
                   key={service.title}
                   variants={scaleIn}
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -6 }}
                   className="group overflow-hidden rounded-[1.65rem] border border-slate-200 bg-[var(--color-elive-light)] shadow-[0_12px_30px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
                 >
                   <div className="relative h-44 w-full overflow-hidden">
@@ -653,7 +611,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PLATFORM / PRODUCT SECTION */}
+      {/* PLATFORM SECTION */}
       <section className="relative overflow-hidden bg-[#143066] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
         <div className="absolute inset-0">
           <div className="absolute -top-10 left-0 h-72 w-72 rounded-full bg-[var(--color-elive-accent)]/10 blur-3xl" />
@@ -664,11 +622,10 @@ export default function HomePage() {
           <Reveal>
             <div>
               <SectionIntro
-                eyebrow="Our Platform Advantage"
+                eyebrow="Platform Advantage"
                 title="Smart Communication and Event Workflows in One Place"
-                description="Use eLive to plan campaigns, manage invitations, automate attendee communication, verify entry, and track performance through one modern workflow."
+                description="Use eLive to organize campaigns, manage invitations, automate updates, verify attendance, and track performance through one connected workflow."
                 light
-                titleClassName="!text-white max-w-3xl"
               />
 
               <StaggerGroup className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -680,25 +637,25 @@ export default function HomePage() {
                     className="flex items-start gap-3 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 text-[15px] font-medium text-white shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur-md transition-all duration-300 hover:bg-white/14 hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)] md:text-base"
                   >
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-elive-accent)]" />
-                    <span className="!text-white">{feature}</span>
+                    <span className="text-white">{feature}</span>
                   </motion.div>
                 ))}
               </StaggerGroup>
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  href="/demo"
-                  className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-[#143066] shadow-[0_14px_30px_rgba(243,154,31,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)] hover:text-white"
-                >
-                  View Demo
-                </Link>
-
-                <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/16"
+                  className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(243,154,31,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
                 >
                   Talk to Us
                 </Link>
+
+<Link
+  href="/services"
+  className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold !text-white shadow-[0_10px_24px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20"
+>
+  Explore More
+</Link>
               </div>
             </div>
           </Reveal>
@@ -712,8 +669,8 @@ export default function HomePage() {
             <Reveal>
               <SectionIntro
                 eyebrow="Our Solutions"
-                title="Communication, Event, and Brand Support in One Ecosystem"
-                description="We provide more than standalone services. We create practical systems and support structures that improve communication, audience engagement, coordination, and presentation quality."
+                title="Core Products Built Around Real Business and Event Needs"
+                description="We provide structured solutions that improve communication, attendee engagement, coordination, and brand presentation."
               />
             </Reveal>
 
@@ -722,7 +679,7 @@ export default function HomePage() {
                 <motion.div
                   key={item.title}
                   variants={scaleIn}
-                  whileHover={{ y: -6 }}
+                  whileHover={{ y: -5 }}
                   className="rounded-[1.65rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_10px_26px_rgba(15,35,76,0.05)] transition duration-300 hover:shadow-[0_16px_32px_rgba(15,35,76,0.08)]"
                 >
                   <h3 className="text-lg font-black text-[#143066] md:text-xl">
@@ -745,7 +702,7 @@ export default function HomePage() {
             <SectionIntro
               eyebrow="How It Works"
               title="Simple Process. Strong Results."
-              description="Our workflow is built to simplify communication, event execution, and customer engagement from start to finish."
+              description="Our workflow is designed to keep communication, execution, and audience engagement well structured from start to finish."
               align="center"
             />
           </Reveal>
@@ -755,7 +712,7 @@ export default function HomePage() {
               <motion.div
                 key={item.step}
                 variants={scaleIn}
-                whileHover={{ y: -6 }}
+                whileHover={{ y: -5 }}
                 className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
               >
                 <div className="text-2xl font-black text-[var(--color-elive-accent)] md:text-3xl">
@@ -780,14 +737,14 @@ export default function HomePage() {
             <Reveal>
               <SectionIntro
                 eyebrow="Portfolio Preview"
-                title="Work That Reflects Quality, Clarity, and Strong Presentation"
+                title="Work That Reflects Quality, Clarity, and Professional Presentation"
               />
             </Reveal>
 
             <Reveal>
               <Link
                 href="/portfolio"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#143066] to-[#2957A4] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(20,48,102,0.24)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(20,48,102,0.32)]"
+                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#143066] to-[#2957A4] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(20,48,102,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(20,48,102,0.28)]"
               >
                 <span className="text-white">View Portfolio</span>
                 <ArrowRight
@@ -803,7 +760,7 @@ export default function HomePage() {
               <motion.div
                 key={item.title}
                 variants={scaleIn}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -6 }}
                 className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
               >
                 <div className="relative h-56 w-full overflow-hidden">
@@ -830,45 +787,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="bg-white px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <SectionIntro
-              eyebrow="Client Confidence"
-              title="Trusted Support for Communication and Events"
-              align="center"
-            />
-          </Reveal>
-
-          <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-2">
-            {testimonials.map((item) => (
-              <motion.div
-                key={item.name + item.role}
-                variants={scaleIn}
-                whileHover={{ y: -6 }}
-                className="rounded-[1.75rem] border border-slate-200 bg-[var(--color-elive-light)] p-7 shadow-[0_12px_28px_rgba(15,35,76,0.05)]"
-              >
-                <p className="text-base leading-8 text-slate-700 md:text-[17px]">
-                  “{item.quote}”
-                </p>
-                <div className="mt-6">
-                  <h3 className="text-base font-black text-[#143066] md:text-lg">
-                    {item.name}
-                  </h3>
-                  <p className="text-sm text-slate-500 md:text-[15px]">
-                    {item.role}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </StaggerGroup>
-        </div>
-      </section>
-
-      {/* STRONG CTA */}
+      {/* CTA */}
       <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] bg-gradient-to-r from-[#102A5C] via-[#143066] to-[#2957A4] px-6 py-12 text-white shadow-[0_24px_55px_rgba(20,48,102,0.22)] md:px-10 lg:px-14">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] bg-gradient-to-r from-[#102A5C] via-[#143066] to-[#2957A4] px-6 py-12 shadow-[0_24px_55px_rgba(20,48,102,0.22)] md:px-10 lg:px-14">
           <motion.div
             className="grid gap-10 lg:grid-cols-[1.15fr,0.85fr] lg:items-center"
             variants={staggerContainer}
@@ -876,18 +797,13 @@ export default function HomePage() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.25 }}
           >
-            <motion.div variants={fadeUp} className="relative">
-              <div className="absolute -left-10 top-0 h-40 w-40 rounded-full bg-[var(--color-elive-accent)]/10 blur-3xl" />
-
-              <div className="relative">
-                <SectionIntro
-                  eyebrow="Proven Experience"
-                  title="Ready to Run Smarter Campaigns and Events?"
-                  description="From Bulk SMS and digital invitations to event operations, branding, printing, and media coverage, eLive helps you deliver organized, engaging, and professional experiences."
-                  light
-                  titleClassName="!text-white max-w-3xl"
-                />
-              </div>
+            <motion.div variants={fadeUp}>
+              <SectionIntro
+                eyebrow="Let’s Work Together"
+                title="Ready to Build Smarter Campaigns and Better Event Experiences?"
+                description="From messaging and invitations to branding, media, and on-ground execution, eLive helps you deliver with clarity and confidence."
+                light
+              />
             </motion.div>
 
             <motion.div
@@ -896,17 +812,17 @@ export default function HomePage() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-[#143066] shadow-[0_14px_30px_rgba(243,154,31,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)] hover:text-white"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(243,154,31,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
               >
                 Get Started
               </Link>
 
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/16"
-              >
-                View Portfolio
-              </Link>
+             <Link
+  href="/services"
+  className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-7 py-3.5 text-sm font-semibold !text-white shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/16"
+>
+  View Services
+</Link>
             </motion.div>
           </motion.div>
         </div>
@@ -921,7 +837,7 @@ export default function HomePage() {
                 <SectionIntro
                   eyebrow="Contact Us"
                   title="Let’s Make Something Together"
-                  description="Tell us about your campaign, event, communication need, or brand project and we will help you shape the right solution."
+                  description="Tell us about your campaign, event, communication need, or branding project and we will help shape the right solution."
                 />
 
                 <div className="mt-8 grid gap-4">
@@ -1013,11 +929,10 @@ export default function HomePage() {
 
                 <select className="mt-4 w-full rounded-2xl border border-slate-200 bg-[var(--color-elive-light)] px-4 py-3.5 text-[15px] text-slate-700 outline-none transition-all duration-200 focus:border-[var(--color-elive-accent)] focus:bg-white focus:ring-2 focus:ring-[var(--color-elive-accent)]/20 md:text-base">
                   <option>Select Service</option>
-                  <option>Bulk SMS</option>
-                  <option>Event Attendee Management</option>
-                  <option>Creative Design</option>
-                  <option>Multimedia Solutions</option>
-                  <option>Printing & Branding</option>
+                  <option>Communication Solutions</option>
+                  <option>Event Management</option>
+                  <option>Multimedia Production</option>
+                  <option>Branding & Printing</option>
                 </select>
 
                 <textarea

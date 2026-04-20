@@ -50,7 +50,7 @@ const coreServices = [
     title: "Bulk SMS Solutions",
     icon: Megaphone,
     description:
-      "Fast, reliable messaging for promotions, alerts, reminders, announcements, awareness campaigns, and customer communication.",
+      "Reliable messaging support for promotions, alerts, reminders, announcements, and customer communication.",
     points: [
       "Promotional campaigns",
       "Reminders and alerts",
@@ -86,7 +86,7 @@ const coreServices = [
     title: "Multimedia Solutions",
     icon: MonitorPlay,
     description:
-      "Media support for events and campaigns, including live streaming, projection, photography, videography, and digital promotion.",
+      "Professional media support for events and campaigns, including live streaming, photography, videography, projection, and digital promotion.",
     points: [
       "Live streaming",
       "Photography and videography",
@@ -147,10 +147,8 @@ const printingBranding = [
   "Digital printing",
   "Offset printing",
   "Large format printing",
-  "UV printing",
   "Promotional products",
   "Office branding",
-  "Vehicle branding",
   "Signage and display materials",
 ];
 
@@ -214,7 +212,7 @@ function SectionIntro({
       <p
         className={`text-sm font-bold uppercase tracking-[0.22em] md:text-[15px] ${
           light
-            ? "text-[var(--color-elive-accent)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.22)]"
+            ? "!text-[var(--color-elive-accent)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.22)]"
             : "text-[var(--color-elive-accent)]"
         }`}
       >
@@ -222,7 +220,7 @@ function SectionIntro({
       </p>
 
       <h2
-        className={`mt-3 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl ${
+        className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
           light
             ? "!text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.30)]"
             : "text-[#143066]"
@@ -327,7 +325,7 @@ export default function ServicesPage() {
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-4 text-4xl font-semibold leading-[1.05] md:text-5xl lg:text-[64px]"
+                className="mt-4 text-4xl font-black leading-[1.05] md:text-5xl lg:text-[64px]"
               >
                 <span className="block text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.22)]">
                   Integrated Services for
@@ -353,7 +351,7 @@ export default function ServicesPage() {
               >
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-base font-semibold text-[#143066] shadow-[0_14px_34px_rgba(243,154,31,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-base font-semibold text-white shadow-[0_14px_34px_rgba(243,154,31,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
                 >
                   Request a Service
                   <ArrowRight size={18} />
@@ -361,7 +359,7 @@ export default function ServicesPage() {
 
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center rounded-full border border-white/50 bg-white/8 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/14"
+                  className="inline-flex items-center justify-center rounded-full border border-white/50 bg-white/8 px-7 py-3.5 text-base font-semibold !text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/14"
                 >
                   Learn About Us
                 </Link>
@@ -370,50 +368,51 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-{/* SUB-BRANDS / PLATFORMS */}
-<section className="bg-white px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-  <div className="mx-auto max-w-7xl">
-    <Reveal>
-      <SectionIntro
-        eyebrow="Our Platforms"
-        title="Specialized eLive Service Brands"
-        description="Our service ecosystem includes focused platforms for messaging, invitations, media, and promotional delivery."
-        align="center"
-      />
-    </Reveal>
 
-    <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-      {subBrands.map((brand) => (
-        <motion.div
-          key={brand.name}
-          variants={scaleIn}
-          whileHover={{ y: -8 }}
-          className="group rounded-[1.5rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_12px_28px_rgba(15,35,76,0.05)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_22px_42px_rgba(15,35,76,0.12)]"
-        >
-          <div className="flex h-[88px] items-center justify-start">
-            <Image
-              src={brand.logo}
-              alt={brand.name}
-              width={220}
-              height={70}
-              className="h-auto max-h-16 w-auto object-contain transition duration-300 group-hover:scale-[1.03]"
+      {/* SUB-BRANDS / PLATFORMS */}
+      <section className="bg-white px-4 py-16 md:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <SectionIntro
+              eyebrow="Our Platforms"
+              title="Specialized eLive Service Brands"
+              description="Our service ecosystem includes focused platforms for messaging, invitations, media, and promotional delivery."
+              align="center"
             />
-          </div>
+          </Reveal>
 
-          <div className="mt-4">
-            <h3 className="text-xl font-bold tracking-tight text-[#143066]">
-              {brand.name}
-            </h3>
+          <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {subBrands.map((brand) => (
+              <motion.div
+                key={brand.name}
+                variants={scaleIn}
+                whileHover={{ y: -8 }}
+                className="group rounded-[1.5rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_12px_28px_rgba(15,35,76,0.05)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_22px_42px_rgba(15,35,76,0.12)]"
+              >
+                <div className="flex h-[88px] items-center justify-start">
+                  <Image
+                    src={brand.logo}
+                    alt={brand.name}
+                    width={220}
+                    height={70}
+                    className="h-auto max-h-16 w-auto object-contain transition duration-300 group-hover:scale-[1.03]"
+                  />
+                </div>
 
-            <p className="mt-3 text-[15px] leading-7 text-slate-600">
-              {brand.description}
-            </p>
-          </div>
-        </motion.div>
-      ))}
-    </StaggerGroup>
-  </div>
-</section>
+                <div className="mt-4">
+                  <h3 className="text-xl font-black tracking-tight text-[#143066]">
+                    {brand.name}
+                  </h3>
+
+                  <p className="mt-3 text-[15px] leading-7 text-slate-600">
+                    {brand.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </StaggerGroup>
+        </div>
+      </section>
 
       {/* CORE SERVICES */}
       <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
@@ -442,7 +441,7 @@ export default function ServicesPage() {
                     <Icon size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-xl font-bold text-[#143066]">
+                  <h3 className="mt-5 text-xl font-black text-[#143066]">
                     {service.title}
                   </h3>
 
@@ -497,12 +496,12 @@ export default function ServicesPage() {
                 <motion.div
                   key={item.title}
                   variants={scaleIn}
-                  className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6"
+                  className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_10px_24px_rgba(15,35,76,0.05)]"
                 >
                   <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
                     <Icon size={20} />
                   </div>
-                  <h3 className="mt-4 text-lg font-bold text-[#143066]">
+                  <h3 className="mt-4 text-lg font-black text-[#143066]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-7 text-slate-600">
@@ -549,7 +548,7 @@ export default function ServicesPage() {
                     />
                   </div>
 
-                  <h3 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
+                  <h3 className="text-2xl font-black tracking-tight text-white md:text-3xl">
                     Professional Output, Stronger Brand Presence
                   </h3>
                 </div>
@@ -644,14 +643,14 @@ export default function ServicesPage() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-[#143066] shadow-[0_14px_30px_rgba(243,154,31,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)] hover:text-white"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(243,154,31,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
               >
                 Contact Us
               </Link>
 
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center rounded-full border border-white/50 bg-white/8 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/16"
+                className="inline-flex items-center justify-center rounded-full border border-white/50 bg-white/8 px-7 py-3.5 text-sm font-semibold !text-white shadow-[0_10px_24px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/16"
               >
                 About eLive
               </Link>
