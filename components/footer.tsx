@@ -19,15 +19,15 @@ export default function Footer() {
 
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-10 md:grid-cols-3 md:px-6 lg:px-8">
         <div>
-          <Link href="/" className="inline-flex">
-            <Image
-              src="/logo.png"
-              alt="eLive"
-              width={110}
-              height={40}
-              className="h-auto w-[110px] brightness-0 invert"
-            />
-          </Link>
+         <Link href="/" className="inline-flex">
+  <Image
+    src="/logo-elive.png"
+    alt="eLive"
+    width={120}
+    height={40}
+    className="h-auto w-[110px]"
+  />
+</Link>
 
           <p className="mt-4 max-w-sm text-sm leading-6 text-white/70">
             Communication, event, branding, printing, and multimedia solutions

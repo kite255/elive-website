@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -8,15 +9,15 @@ import {
   ArrowRight,
   BadgeCheck,
   CheckCircle2,
+  Mail,
+  MapPin,
   Megaphone,
+  MessageCircle,
   MonitorPlay,
   PhoneCall,
   Printer,
   QrCode,
   Users,
-  Mail,
-  MapPin,
-  MessageCircle,
 } from "lucide-react";
 
 const serviceHighlights = [
@@ -43,10 +44,26 @@ const serviceHighlights = [
 ];
 
 const stats = [
-  { value: "3,900+", label: "Attendees Successfully Managed" },
-  { value: "25+", label: "Events Delivered" },
-  { value: "4", label: "Core Solution Areas" },
-  { value: "100%", label: "Commitment to Client Success" },
+  {
+    value: 6895,
+    suffix: "+",
+    label: "Attendees Successfully Managed",
+  },
+  {
+    value: 46,
+    suffix: "+",
+    label: "Events Delivered",
+  },
+  {
+    value: 4,
+    suffix: "",
+    label: "Core Service Solutions",
+  },
+  {
+    value: 100,
+    suffix: "%",
+    label: "Commitment to Client Success",
+  },
 ];
 
 const trustedBy = [
@@ -60,8 +77,8 @@ const trustedBy = [
 
 const whyChooseUs = [
   {
-    title: "End-to-End Solutions",
-    desc: "From communication to branding and event execution, we provide integrated support under one trusted partner.",
+    title: "End-to-End Support",
+    desc: "From communication to branding and event execution, we provide coordinated support under one trusted partner.",
     icon: BadgeCheck,
   },
   {
@@ -79,33 +96,6 @@ const whyChooseUs = [
     desc: "Use QR verification, attendee visibility, alerts, and reporting to improve coordination and performance.",
     icon: QrCode,
   },
-];
-
-const featuredServices = [
-  {
-    title: "Event Attendee Management",
-    desc: "Manage invitations, guest registration, RSVP flows, QR verification, check-ins, and attendee reporting.",
-    image: "/service-1.jpg",
-  },
-  {
-    title: "Bulk SMS Platform",
-    desc: "Run promotions, reminders, alerts, service notifications, and awareness campaigns from one reliable platform.",
-    image: "/service-2.jpg",
-  },
-  {
-    title: "Media & Brand Support",
-    desc: "Strengthen your event or business presence with multimedia coverage, design, branding, and print delivery.",
-    image: "/service-3.jpg",
-  },
-];
-
-const platformFeatures = [
-  "Campaign scheduling and message delivery",
-  "Digital invitations and RSVP workflows",
-  "QR-based ticketing and attendee check-in",
-  "Real-time attendee visibility and coordination",
-  "Automated reminders and notifications",
-  "Post-event reporting and performance tracking",
 ];
 
 const processSteps = [
@@ -134,11 +124,11 @@ const processSteps = [
 const solutions = [
   {
     title: "eLive SMS",
-    desc: "A practical bulk messaging solution for promotions, alerts, reminders, notifications, and audience engagement.",
+    desc: "Bulk messaging for promotions, alerts, reminders, notifications, and audience engagement.",
   },
   {
     title: "eLive Card",
-    desc: "A digital invitation and attendee workflow with RSVP support, ticketing flow, and QR-based verification.",
+    desc: "Digital invitations, RSVP support, ticketing flow, and QR-based verification.",
   },
   {
     title: "WhatsApp Communication",
@@ -146,25 +136,7 @@ const solutions = [
   },
   {
     title: "Live Media Support",
-    desc: "Live streaming, photography, videography, and on-site media support for memorable event experiences.",
-  },
-];
-
-const portfolio = [
-  {
-    title: "Corporate Events",
-    desc: "Professional attendee handling, communication support, branding, and media coordination for organized events.",
-    image: "/portfolio-1.jpg",
-  },
-  {
-    title: "Social & Wedding Events",
-    desc: "Elegant invitations, RSVP coordination, guest engagement, and event presentation support.",
-    image: "/portfolio-2.jpg",
-  },
-  {
-    title: "Branding & Print Projects",
-    desc: "Signage, office branding, labels, stationery, apparel, and promotional material execution.",
-    image: "/portfolio-3.jpg",
+    desc: "Live streaming, photography, videography, and on-site media support for professional events.",
   },
 ];
 
@@ -207,7 +179,6 @@ type SectionIntroProps = {
   description?: string;
   align?: "left" | "center";
   light?: boolean;
-  titleClassName?: string;
 };
 
 function SectionIntro({
@@ -216,7 +187,6 @@ function SectionIntro({
   description,
   align = "left",
   light = false,
-  titleClassName = "",
 }: SectionIntroProps) {
   const isCenter = align === "center";
 
@@ -225,7 +195,7 @@ function SectionIntro({
       <p
         className={`text-sm font-bold uppercase tracking-[0.22em] md:text-[15px] ${
           light
-            ? "!text-[var(--color-elive-accent)] drop-shadow-[0_2px_10px_rgba(0,0,0,0.22)]"
+            ? "!text-[var(--color-elive-accent)]"
             : "text-[var(--color-elive-accent)]"
         }`}
       >
@@ -234,10 +204,8 @@ function SectionIntro({
 
       <h2
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
-          light
-            ? "!text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.30)]"
-            : "text-[#143066]"
-        } ${titleClassName}`}
+          light ? "!text-white" : "text-[#143066]"
+        }`}
       >
         {title}
       </h2>
@@ -251,9 +219,7 @@ function SectionIntro({
       {description ? (
         <p
           className={`mt-5 text-base leading-8 md:text-[17px] ${
-            light
-              ? "!text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.18)]"
-              : "text-slate-600"
+            light ? "!text-white/90" : "text-slate-600"
           }`}
         >
           {description}
@@ -319,7 +285,6 @@ export default function HomePage() {
               className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(243,154,31,0.08),transparent_26%)]" />
           </div>
 
           <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
@@ -346,26 +311,23 @@ export default function HomePage() {
                 className="mt-6 max-w-2xl text-base leading-8 text-white/85 md:text-lg"
               >
                 We deliver communication, event, branding, and media solutions
-                that help organizations operate more professionally and engage
-                their audiences with confidence.
+                that help organizations operate professionally and engage their
+                audiences with confidence.
               </motion.p>
 
-              <motion.div
-                variants={fadeUp}
-                className="mt-8 flex flex-wrap gap-4"
-              >
-           <Link
-  href="/contact"
-  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
->
-  <span className="text-white">Get Started</span>
-  <ArrowRight size={18} className="text-white" />
-</Link>
+              <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+                >
+                  <span className="text-white">Get Started</span>
+                  <ArrowRight size={18} className="text-white" />
+                </Link>
 
-         <Link
-  href="/services"
-  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-8 py-4 text-base font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
->
+                <Link
+                  href="/services"
+                  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-8 py-4 text-base font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+                >
                   Explore Services
                 </Link>
               </motion.div>
@@ -384,7 +346,6 @@ export default function HomePage() {
                   key={card.title}
                   variants={scaleIn}
                   whileHover={{ y: -6 }}
-                  transition={{ duration: 0.25 }}
                   className="group rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_20px_42px_rgba(15,35,76,0.12)]"
                 >
                   <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066] transition-all duration-300 group-hover:bg-[#143066] group-hover:text-white">
@@ -424,72 +385,62 @@ export default function HomePage() {
 
       {/* ABOUT */}
       <section className="px-4 pb-16 pt-20 md:px-6 lg:px-8 lg:pb-24 lg:pt-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[0.48fr,1fr] lg:gap-12 lg:items-start">
-            <Reveal>
-              <SectionIntro
-                eyebrow="About eLive"
-                title="Integrated Support for Communication, Events, and Brand Visibility"
-                description="We help businesses and events communicate clearly, execute professionally, and deliver better audience experiences."
-              />
-            </Reveal>
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.48fr,1fr] lg:items-start lg:gap-12">
+          <Reveal>
+            <SectionIntro
+              eyebrow="About eLive"
+              title="Integrated Support for Communication, Events, and Brand Visibility"
+              description="We help businesses and events communicate clearly, execute professionally, and deliver better audience experiences."
+            />
+          </Reveal>
 
-            <Reveal>
-              <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] p-7 shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute -right-12 top-0 h-40 w-40 rounded-full bg-white blur-3xl" />
-                  <div className="absolute -left-10 bottom-0 h-44 w-44 rounded-full bg-[var(--color-elive-accent)] blur-3xl" />
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] p-7 shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
+              <p className="text-base leading-8 text-white md:text-[17px]">
+                At eLive, we deliver communication and marketing solutions that
+                help businesses and events connect, impress, and engage their
+                audiences more effectively.
+              </p>
+
+              <p className="mt-5 text-base leading-8 text-white/85 md:text-[17px]">
+                Our strength lies in combining messaging, attendee management,
+                branding, printing, and media support into one practical and
+                coordinated service experience.
+              </p>
+
+              <div className="mt-8 grid gap-4 border-t border-white/15 pt-8 sm:grid-cols-2">
+                <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 backdrop-blur">
+                  <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
+                    What We Deliver
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-white/90 md:text-[15px]">
+                    Smart communication, event coordination, and brand support.
+                  </p>
                 </div>
 
-                <div className="relative grid gap-5">
-                  <p className="text-base leading-8 text-white md:text-[17px]">
-                    At eLive, we deliver communication and marketing solutions
-                    that help businesses and events connect, impress, and engage
-                    their audiences more effectively.
+                <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 backdrop-blur">
+                  <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
+                    Who We Serve
                   </p>
-
-                  <p className="text-base leading-8 text-white/85 md:text-[17px]">
-                    Our strength lies in combining messaging, attendee
-                    management, branding, printing, and media support into one
-                    practical and coordinated service experience.
+                  <p className="mt-2 text-sm leading-7 text-white/90 md:text-[15px]">
+                    Businesses, institutions, associations, churches, NGOs, and
+                    event organizers.
                   </p>
-
-                  <div className="mt-4 grid gap-4 border-t border-white/15 pt-8 sm:grid-cols-2">
-                    <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur">
-                      <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
-                        What We Deliver
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-white/90 md:text-[15px]">
-                        Smart communication, event coordination, and brand
-                        execution designed to work together.
-                      </p>
-                    </div>
-
-                    <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur">
-                      <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
-                        How We Work
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-white/90 md:text-[15px]">
-                        We blend technology, creativity, and structure to support
-                        better delivery and stronger audience engagement.
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* STATS */}
-      <section className="bg-white px-4 py-14 md:px-6 lg:px-8 lg:py-20">
+      <section className="bg-white px-4 py-16 md:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionIntro
               eyebrow="Our Impact"
               title="Numbers That Reflect Real Delivery"
-              description="We support campaigns, brands, and events with practical systems that improve communication, coordination, and presentation."
+              description="We support campaigns, brands, and events with practical solutions that improve communication, coordination, and presentation."
               align="center"
             />
           </Reveal>
@@ -499,29 +450,37 @@ export default function HomePage() {
               <motion.div
                 key={item.label}
                 variants={scaleIn}
-                whileHover={{ y: -5 }}
-                className="group rounded-[1.6rem] border border-slate-200 bg-white p-7 text-center shadow-[0_10px_24px_rgba(15,35,76,0.05)] transition-all duration-300 hover:shadow-[0_18px_36px_rgba(15,35,76,0.1)]"
+                whileHover={{ y: -6 }}
+                className="group rounded-[1.6rem] border border-slate-200 bg-white p-8 text-center shadow-[0_10px_25px_rgba(15,35,76,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,35,76,0.12)]"
               >
-                <div className="text-4xl font-black text-[#143066] transition-all duration-300 group-hover:text-[var(--color-elive-accent)] md:text-5xl">
-                  {item.value}
+                <div className="text-4xl font-black text-[#143066] md:text-5xl">
+                  <AnimatedNumber value={item.value} suffix={item.suffix} />
                 </div>
-                <p className="mt-2 text-sm font-medium text-slate-600 md:text-[15px]">
+
+                <p className="mt-3 text-sm font-medium text-slate-600 md:text-[15px]">
                   {item.label}
                 </p>
+
+                <div className="mx-auto mt-4 h-[3px] w-10 rounded-full bg-[var(--color-elive-accent)] opacity-0 transition-all duration-300 group-hover:w-16 group-hover:opacity-100" />
               </motion.div>
             ))}
           </StaggerGroup>
+
+          <p className="mt-10 text-center text-sm text-slate-500">
+            Trusted by businesses, institutions, and event organizers across
+            Tanzania
+          </p>
         </div>
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="bg-[var(--color-elive-light)] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
+      <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionIntro
               eyebrow="Why Choose eLive"
-              title="Built for Clarity, Reliability, and Impact"
-              description="We combine communication tools, event operations, and brand execution into one structured and dependable workflow."
+              title="Practical Delivery with Professional Coordination"
+              description="We focus on the details that help your campaign, event, or brand presentation run smoothly."
               align="center"
             />
           </Reveal>
@@ -535,16 +494,17 @@ export default function HomePage() {
                   key={item.title}
                   variants={scaleIn}
                   whileHover={{ y: -6 }}
-                  className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
+                  className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_18px_36px_rgba(15,35,76,0.1)]"
                 >
                   <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
-                    <Icon size={22} />
+                    <Icon size={21} />
                   </div>
 
-                  <h3 className="mt-4 text-lg font-black text-[#143066] md:text-xl">
+                  <h3 className="mt-4 text-lg font-black text-[#143066]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-[15px] leading-7 text-slate-600 md:text-base">
+
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
                     {item.desc}
                   </p>
                 </motion.div>
@@ -554,155 +514,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FEATURED SERVICES */}
-      <section className="bg-white px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-[0.95fr,1.05fr] lg:items-start">
-            <Reveal>
-              <div>
-                <SectionIntro
-                  eyebrow="Our Services"
-                  title="Practical Solutions Tailored to Your Goals"
-                  description="From audience communication to event support, branding, and execution, we help clients build experiences that are organized, visible, and memorable."
-                />
-
-                <Link
-                  href="/services"
-                  className="group mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#143066] to-[#2957A4] px-7 py-4 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(20,48,102,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(20,48,102,0.28)]"
-                >
-                  <span className="text-white">View All Services</span>
-                  <ArrowRight
-                    size={16}
-                    className="text-white transition-transform duration-300 group-hover:translate-x-1"
-                  />
-                </Link>
-              </div>
-            </Reveal>
-
-            <StaggerGroup className="grid gap-6 md:grid-cols-3">
-              {featuredServices.map((service) => (
-                <motion.div
-                  key={service.title}
-                  variants={scaleIn}
-                  whileHover={{ y: -6 }}
-                  className="group overflow-hidden rounded-[1.65rem] border border-slate-200 bg-[var(--color-elive-light)] shadow-[0_12px_30px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
-                >
-                  <div className="relative h-44 w-full overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 280px"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-black text-[#143066] md:text-xl">
-                      {service.title}
-                    </h3>
-                    <p className="mt-3 text-[15px] leading-7 text-slate-600 md:text-base">
-                      {service.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </StaggerGroup>
-          </div>
-        </div>
-      </section>
-
-      {/* PLATFORM SECTION */}
-      <section className="relative overflow-hidden bg-[#143066] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="absolute inset-0">
-          <div className="absolute -top-10 left-0 h-72 w-72 rounded-full bg-[var(--color-elive-accent)]/10 blur-3xl" />
-          <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
-        </div>
-
-        <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr,1fr] lg:items-center">
-          <Reveal>
-            <div>
-              <SectionIntro
-                eyebrow="Platform Advantage"
-                title="Smart Communication and Event Workflows in One Place"
-                description="Use eLive to organize campaigns, manage invitations, automate updates, verify attendance, and track performance through one connected workflow."
-                light
-              />
-
-              <StaggerGroup className="mt-8 grid gap-4 sm:grid-cols-2">
-                {platformFeatures.map((feature) => (
-                  <motion.div
-                    key={feature}
-                    variants={scaleIn}
-                    whileHover={{ y: -4 }}
-                    className="flex items-start gap-3 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 text-[15px] font-medium text-white shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur-md transition-all duration-300 hover:bg-white/14 hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)] md:text-base"
-                  >
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-elive-accent)]" />
-                    <span className="text-white">{feature}</span>
-                  </motion.div>
-                ))}
-              </StaggerGroup>
-
-              <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-  href="/contact"
-  className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
->
-  Talk to Us
-</Link>
-
-<Link
-  href="/services"
-  className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold !text-white shadow-[0_10px_24px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20"
->
-  Explore More
-</Link>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* SOLUTIONS */}
       <section className="bg-white px-4 py-16 md:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr,1.1fr]">
-            <Reveal>
-              <SectionIntro
-                eyebrow="Our Solutions"
-                title="Core Products Built Around Real Business and Event Needs"
-                description="We provide structured solutions that improve communication, attendee engagement, coordination, and brand presentation."
-              />
-            </Reveal>
+          <Reveal>
+            <SectionIntro
+              eyebrow="Our Solutions"
+              title="Services Built Around Communication and Event Success"
+              description="eLive brings together tools and services that help organizations communicate better, manage events smoothly, and present their brands professionally."
+              align="center"
+            />
+          </Reveal>
 
-            <StaggerGroup className="grid gap-5 md:grid-cols-2">
-              {solutions.map((item) => (
-                <motion.div
-                  key={item.title}
-                  variants={scaleIn}
-                  whileHover={{ y: -5 }}
-                  className="rounded-[1.65rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_10px_26px_rgba(15,35,76,0.05)] transition duration-300 hover:shadow-[0_16px_32px_rgba(15,35,76,0.08)]"
-                >
-                  <h3 className="text-lg font-black text-[#143066] md:text-xl">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-[15px] leading-7 text-slate-600 md:text-base">
-                    {item.desc}
-                  </p>
-                </motion.div>
-              ))}
-            </StaggerGroup>
-          </div>
+          <StaggerGroup className="mt-12 grid gap-6 md:grid-cols-2">
+            {solutions.map((item) => (
+              <motion.div
+                key={item.title}
+                variants={scaleIn}
+                whileHover={{ y: -5 }}
+                className="rounded-[1.7rem] border border-slate-200 bg-[var(--color-elive-light)] p-7 shadow-[0_12px_28px_rgba(15,35,76,0.05)] transition-all duration-300 hover:shadow-[0_18px_38px_rgba(15,35,76,0.10)]"
+              >
+                <h3 className="text-xl font-black text-[#143066]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </StaggerGroup>
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="bg-[var(--color-elive-light)] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
+      {/* PROCESS */}
+      <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionIntro
-              eyebrow="How It Works"
-              title="Simple Process. Strong Results."
-              description="Our workflow is designed to keep communication, execution, and audience engagement well structured from start to finish."
+              eyebrow="How We Work"
+              title="A Simple Process for Better Delivery"
+              description="We organize every project around clarity, coordination, execution, and measurable improvement."
               align="center"
             />
           </Reveal>
@@ -712,16 +563,15 @@ export default function HomePage() {
               <motion.div
                 key={item.step}
                 variants={scaleIn}
-                whileHover={{ y: -5 }}
-                className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
+                className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)]"
               >
-                <div className="text-2xl font-black text-[var(--color-elive-accent)] md:text-3xl">
+                <span className="text-sm font-black text-[var(--color-elive-accent)]">
                   {item.step}
-                </div>
-                <h3 className="mt-3 text-lg font-black text-[#143066] md:text-xl">
+                </span>
+                <h3 className="mt-3 text-lg font-black text-[#143066]">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-[15px] leading-7 text-slate-600 md:text-base">
+                <p className="mt-3 text-sm leading-7 text-slate-600">
                   {item.desc}
                 </p>
               </motion.div>
@@ -730,204 +580,90 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PORTFOLIO */}
-      <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <Reveal>
-              <SectionIntro
-                eyebrow="Portfolio Preview"
-                title="Work That Reflects Quality, Clarity, and Professional Presentation"
-              />
-            </Reveal>
-
-            <Reveal>
-              <Link
-                href="/portfolio"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#143066] to-[#2957A4] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(20,48,102,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(20,48,102,0.28)]"
-              >
-                <span className="text-white">View Portfolio</span>
-                <ArrowRight
-                  size={16}
-                  className="text-white transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </Link>
-            </Reveal>
-          </div>
-
-          <StaggerGroup className="mt-10 grid gap-6 md:grid-cols-3">
-            {portfolio.map((item, index) => (
-              <motion.div
-                key={item.title}
-                variants={scaleIn}
-                whileHover={{ y: -6 }}
-                className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
-              >
-                <div className="relative h-56 w-full overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    loading={index === 0 ? "eager" : "lazy"}
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-black text-[#143066] md:text-xl">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-[15px] leading-7 text-slate-600 md:text-base">
-                    {item.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </StaggerGroup>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] bg-gradient-to-r from-[#102A5C] via-[#143066] to-[#2957A4] px-6 py-12 shadow-[0_24px_55px_rgba(20,48,102,0.22)] md:px-10 lg:px-14">
-          <motion.div
-            className="grid gap-10 lg:grid-cols-[1.15fr,0.85fr] lg:items-center"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.25 }}
-          >
-            <motion.div variants={fadeUp}>
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] px-6 py-12 shadow-[0_28px_70px_rgba(20,48,102,0.18)] md:px-10 lg:px-12">
+          <div className="grid gap-8 lg:grid-cols-[1fr,auto] lg:items-end">
+            <Reveal>
               <SectionIntro
                 eyebrow="Let’s Work Together"
                 title="Ready to Build Smarter Campaigns and Better Event Experiences?"
                 description="From messaging and invitations to branding, media, and on-ground execution, eLive helps you deliver with clarity and confidence."
                 light
               />
-            </motion.div>
+            </Reveal>
 
-            <motion.div
-              variants={fadeUp}
-              className="flex flex-wrap gap-4 lg:justify-end lg:self-end"
-            >
+            <Reveal className="flex flex-wrap gap-4 lg:justify-end">
               <Link
                 href="/contact"
-                 className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
               >
                 Get Started
               </Link>
 
-             <Link
-  href="/services"
-  className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-7 py-3.5 text-sm font-semibold !text-white shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/16"
->
-  View Services
-</Link>
-            </motion.div>
-          </motion.div>
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-7 py-3.5 text-sm font-semibold !text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/16"
+              >
+                View Services
+              </Link>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* CONTACT */}
       <section className="px-4 pb-16 md:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr,1.1fr] lg:items-start">
-            <Reveal>
-              <div>
-                <SectionIntro
-                  eyebrow="Contact Us"
-                  title="Let’s Make Something Together"
-                  description="Tell us about your campaign, event, communication need, or branding project and we will help shape the right solution."
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr,1.1fr] lg:items-start">
+          <Reveal>
+            <div>
+              <SectionIntro
+                eyebrow="Contact Us"
+                title="Let’s Make Something Together"
+                description="Tell us about your campaign, event, communication need, or branding project and we will help shape the right solution."
+              />
+
+              <div className="mt-8 grid gap-4">
+                <ContactCard
+                  icon={PhoneCall}
+                  label="Phone"
+                  value="+255 745 939 140"
                 />
-
-                <div className="mt-8 grid gap-4">
-                  <div className="flex items-start gap-4 rounded-[1.6rem] border border-slate-200 bg-white px-5 py-5 shadow-[0_10px_26px_rgba(15,35,76,0.06)]">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#143066]/8 text-[#143066]">
-                      <PhoneCall size={20} />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                        Phone
-                      </p>
-                      <p className="mt-1 text-[15px] font-semibold text-[#143066] md:text-base">
-                        +255 745 939 140
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4 rounded-[1.6rem] border border-slate-200 bg-white px-5 py-5 shadow-[0_10px_26px_rgba(15,35,76,0.06)]">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#143066]/8 text-[#143066]">
-                      <MessageCircle size={20} />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                        WhatsApp
-                      </p>
-                      <p className="mt-1 text-[15px] font-semibold text-[#143066] md:text-base">
-                        +255 777 792 017
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4 rounded-[1.6rem] border border-slate-200 bg-white px-5 py-5 shadow-[0_10px_26px_rgba(15,35,76,0.06)]">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#143066]/8 text-[#143066]">
-                      <Mail size={20} />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                        Email
-                      </p>
-                      <p className="mt-1 text-[15px] font-semibold text-[#143066] md:text-base">
-                        info@elive.co.tz
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4 rounded-[1.6rem] border border-slate-200 bg-white px-5 py-5 shadow-[0_10px_26px_rgba(15,35,76,0.06)]">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#143066]/8 text-[#143066]">
-                      <MapPin size={20} />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                        Location
-                      </p>
-                      <p className="mt-1 text-[15px] leading-7 font-semibold text-[#143066] md:text-base">
-                        Ikungwi Street, Kinondoni B, Kawawa Road, Dar es Salaam
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <ContactCard
+                  icon={MessageCircle}
+                  label="WhatsApp"
+                  value="+255 777 792 017"
+                />
+                <ContactCard icon={Mail} label="Email" value="info@elive.co.tz" />
+                <ContactCard
+                  icon={MapPin}
+                  label="Location"
+                  value="Ikungwi Street, Kinondoni B, Kawawa Road, Dar es Salaam"
+                />
               </div>
-            </Reveal>
+            </div>
+          </Reveal>
 
-            <Reveal>
-              <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-[0_22px_55px_rgba(15,35,76,0.10)] md:p-7">
-                <div className="mb-5">
-                  <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--color-elive-accent)]">
-                    Send an Inquiry
-                  </p>
-                  <h3 className="mt-2 text-2xl font-black text-[#143066]">
-                    Tell us about your project
-                  </h3>
-                </div>
+          <Reveal>
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-[0_22px_55px_rgba(15,35,76,0.10)] md:p-7">
+              <div className="mb-5">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--color-elive-accent)]">
+                  Send an Inquiry
+                </p>
+                <h3 className="mt-2 text-2xl font-black text-[#143066]">
+                  Tell us about your project
+                </h3>
+              </div>
 
+              <form className="grid gap-4">
                 <div className="grid gap-4 md:grid-cols-2">
-                  <input
-                    className="w-full rounded-2xl border border-slate-200 bg-[var(--color-elive-light)] px-4 py-3.5 text-[15px] text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[var(--color-elive-accent)] focus:bg-white focus:ring-2 focus:ring-[var(--color-elive-accent)]/20 md:text-base"
-                    placeholder="Full Name"
-                  />
-                  <input
-                    className="w-full rounded-2xl border border-slate-200 bg-[var(--color-elive-light)] px-4 py-3.5 text-[15px] text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[var(--color-elive-accent)] focus:bg-white focus:ring-2 focus:ring-[var(--color-elive-accent)]/20 md:text-base"
-                    placeholder="Phone Number"
-                  />
+                  <input className="input-style" placeholder="Full Name" />
+                  <input className="input-style" placeholder="Phone Number" />
                 </div>
 
-                <input
-                  className="mt-4 w-full rounded-2xl border border-slate-200 bg-[var(--color-elive-light)] px-4 py-3.5 text-[15px] text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[var(--color-elive-accent)] focus:bg-white focus:ring-2 focus:ring-[var(--color-elive-accent)]/20 md:text-base"
-                  placeholder="Email Address"
-                />
+                <input className="input-style" placeholder="Email Address" />
 
-                <select className="mt-4 w-full rounded-2xl border border-slate-200 bg-[var(--color-elive-light)] px-4 py-3.5 text-[15px] text-slate-700 outline-none transition-all duration-200 focus:border-[var(--color-elive-accent)] focus:bg-white focus:ring-2 focus:ring-[var(--color-elive-accent)]/20 md:text-base">
+                <select className="input-style">
                   <option>Select Service</option>
                   <option>Communication Solutions</option>
                   <option>Event Management</option>
@@ -936,18 +672,103 @@ export default function HomePage() {
                 </select>
 
                 <textarea
-                  className="mt-4 min-h-[160px] w-full rounded-2xl border border-slate-200 bg-[var(--color-elive-light)] px-4 py-3.5 text-[15px] text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[var(--color-elive-accent)] focus:bg-white focus:ring-2 focus:ring-[var(--color-elive-accent)]/20 md:text-base"
+                  className="min-h-[160px] w-full rounded-2xl border border-slate-200 bg-[var(--color-elive-light)] px-4 py-3.5 text-[15px] text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[var(--color-elive-accent)] focus:bg-white focus:ring-2 focus:ring-[var(--color-elive-accent)]/20 md:text-base"
                   placeholder="Tell us about your project"
                 />
 
-                <button className="mt-5 inline-flex w-full items-center justify-center rounded-2xl bg-gradient-to-r from-[#143066] to-[#2957A4] px-5 py-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(20,48,102,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(20,48,102,0.35)]">
+                <button
+                  type="button"
+                  className="inline-flex w-full items-center justify-center rounded-2xl bg-gradient-to-r from-[#143066] to-[#2957A4] px-5 py-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(20,48,102,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(20,48,102,0.35)]"
+                >
                   Send Inquiry
                 </button>
-              </div>
-            </Reveal>
-          </div>
+              </form>
+            </div>
+          </Reveal>
         </div>
       </section>
     </main>
+  );
+}
+
+function ContactCard({
+  icon: Icon,
+  label,
+  value,
+}: {
+  icon: React.ElementType;
+  label: string;
+  value: string;
+}) {
+  return (
+    <div className="flex items-start gap-4 rounded-[1.6rem] border border-slate-200 bg-white px-5 py-5 shadow-[0_10px_26px_rgba(15,35,76,0.06)]">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#143066]/8 text-[#143066]">
+        <Icon size={20} />
+      </div>
+
+      <div>
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+          {label}
+        </p>
+        <p className="mt-1 text-[15px] font-semibold leading-7 text-[#143066] md:text-base">
+          {value}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function AnimatedNumber({
+  value,
+  suffix = "",
+}: {
+  value: number;
+  suffix?: string;
+}) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLSpanElement | null>(null);
+
+  useEffect(() => {
+    const element = ref.current;
+
+    if (!element || hasAnimated) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+
+        let start = 0;
+        const duration = 1200;
+        const step = 20;
+        const increment = value / (duration / step);
+
+        const timer = setInterval(() => {
+          start += increment;
+
+          if (start >= value) {
+            setCount(value);
+            clearInterval(timer);
+          } else {
+            setCount(Math.floor(start));
+          }
+        }, step);
+
+        setHasAnimated(true);
+        observer.disconnect();
+      },
+      { threshold: 0.45 }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [value, hasAnimated]);
+
+  return (
+    <span ref={ref}>
+      {count.toLocaleString()}
+      {suffix}
+    </span>
   );
 }

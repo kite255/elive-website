@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -12,7 +13,6 @@ import {
   Eye,
   Lightbulb,
   ShieldCheck,
-  Sparkles,
   Target,
   Users,
 } from "lucide-react";
@@ -51,20 +51,24 @@ const strengths = [
 
 const milestones = [
   {
-    number: "3,900+",
-    label: "Attendees Managed",
+    value: 6895,
+    suffix: "+",
+    label: "Attendees Successfully Managed",
   },
   {
-    number: "25+",
-    label: "Events Supported",
+    value: 46,
+    suffix: "+",
+    label: "Events Delivered",
   },
   {
-    number: "4",
-    label: "Core Solution Areas",
+    value: 4,
+    suffix: "+",
+    label: "Core Service Solutions",
   },
   {
-    number: "1",
-    label: "Integrated Brand Experience",
+    value: 100,
+    suffix: "%",
+    label: "Commitment to Client Success",
   },
 ];
 
@@ -274,21 +278,18 @@ export default function AboutPage() {
                 professional media execution.
               </motion.p>
 
-              <motion.div
-                variants={fadeUp}
-                className="mt-8 flex flex-wrap gap-4"
-              >
+              <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white shadow-[0_14px_34px_rgba(243,154,31,0.26)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--color-elive-accent-dark)]"
                 >
-                  Work With Us
-                  <ArrowRight size={18} />
+                  <span className="text-white">Work With Us</span>
+                  <ArrowRight size={18} className="text-white" />
                 </Link>
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-8 py-4 text-base font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+                  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-7 py-3.5 text-sm font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
                 >
                   Explore Services
                 </Link>
@@ -297,7 +298,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
 
       {/* MISSION & VISION */}
       <section className="bg-white px-4 py-16 md:px-6 lg:px-8 lg:py-24">
@@ -445,8 +445,9 @@ export default function AboutPage() {
                 className="rounded-[1.6rem] border border-white/15 bg-white/10 p-7 text-center shadow-[0_12px_28px_rgba(0,0,0,0.14)] backdrop-blur-md transition duration-300 hover:bg-white/14"
               >
                 <div className="text-4xl font-black text-white md:text-5xl">
-                  {item.number}
+                  <AnimatedNumber value={item.value} suffix={item.suffix} />
                 </div>
+
                 <p className="mt-2 text-sm font-medium text-white/80 md:text-[15px]">
                   {item.label}
                 </p>
@@ -479,9 +480,11 @@ export default function AboutPage() {
                 <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
                   <Building2 size={22} />
                 </div>
+
                 <h3 className="mt-4 text-lg font-black text-[#143066] md:text-xl">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] leading-7 text-slate-600 md:text-base">
                   {item.desc}
                 </p>
@@ -490,7 +493,61 @@ export default function AboutPage() {
           </StaggerGroup>
         </div>
       </section>
+    </main>
+  );
+}
 
-        </main>
+function AnimatedNumber({
+  value,
+  suffix = "",
+}: {
+  value: number;
+  suffix?: string;
+}) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLSpanElement | null>(null);
+
+  useEffect(() => {
+    const element = ref.current;
+
+    if (!element || hasAnimated) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+
+        let start = 0;
+        const duration = 1200;
+        const frameRate = 20;
+        const increment = value / (duration / frameRate);
+
+        const timer = setInterval(() => {
+          start += increment;
+
+          if (start >= value) {
+            setCount(value);
+            clearInterval(timer);
+          } else {
+            setCount(Math.floor(start));
+          }
+        }, frameRate);
+
+        setHasAnimated(true);
+        observer.disconnect();
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [value, hasAnimated]);
+
+  return (
+    <span ref={ref}>
+      {count.toLocaleString()}
+      {suffix}
+    </span>
   );
 }
