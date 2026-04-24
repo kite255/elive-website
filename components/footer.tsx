@@ -4,12 +4,13 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 const links = [
   { label: "About", href: "/about" },
-  { label: "Bulk SMS", href: "/services" },
-  { label: "Cards & Tickets", href: "/solutions" },
+  { label: "Bulk SMS", href: "/bulksms" },
+  { label: "Cards & Tickets", href: "/cards-tickets" },
   { label: "Creative Design", href: "/creative-design" },
   { label: "Multimedia", href: "/multimedia" },
   { label: "Contact", href: "/contact" },
 ];
+
 
 export default function Footer() {
   return (
