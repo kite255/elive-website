@@ -298,74 +298,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* WHO WE ARE */}
-      <section className="px-4 pb-16 pt-20 md:px-6 lg:px-8 lg:pb-24 lg:pt-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-[0.48fr,1fr] lg:items-start lg:gap-12">
-            <Reveal>
-              <SectionIntro
-                eyebrow="Who We Are"
-                title="An Integrated Partner for Communication, Events, and Brand Visibility"
-                description="We combine creativity, technology, and structured execution to help organizations deliver better audience experiences."
-              />
-            </Reveal>
-
-            <Reveal>
-              <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] p-7 shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute -right-12 top-0 h-40 w-40 rounded-full bg-white blur-3xl" />
-                  <div className="absolute -left-10 bottom-0 h-44 w-44 rounded-full bg-[var(--color-elive-accent)] blur-3xl" />
-                </div>
-
-                <div className="relative grid gap-5">
-                  <p className="text-base leading-8 text-white md:text-[17px]">
-                    At eLive, we are dedicated to delivering innovative
-                    communication and marketing solutions that help businesses
-                    and events connect, impress, and engage their audiences.
-                  </p>
-
-                  <p className="text-base leading-8 text-white/85 md:text-[17px]">
-                    Our services span communication support, attendee
-                    management, branding, printing, and media production,
-                    enabling our clients to manage more through one capable and
-                    dependable team.
-                  </p>
-
-                  <p className="text-base leading-8 text-white/85 md:text-[17px]">
-                    Whether the goal is to launch a campaign, organize an event,
-                    or strengthen brand presence, we work to deliver solutions
-                    that are practical, polished, and aligned with business
-                    objectives.
-                  </p>
-
-                  <div className="mt-4 grid gap-4 border-t border-white/15 pt-8 sm:grid-cols-2">
-                    <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur">
-                      <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
-                        What We Do
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-white/90 md:text-[15px]">
-                        We support communication, event execution, brand
-                        visibility, and audience engagement through integrated
-                        service delivery.
-                      </p>
-                    </div>
-
-                    <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 shadow-[0_10px_24px_rgba(0,0,0,0.14)] backdrop-blur">
-                      <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
-                        What Makes Us Different
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-white/90 md:text-[15px]">
-                        We bring together communication tools, creative support,
-                        and structured operations in one coordinated workflow.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
 
       {/* MISSION & VISION */}
       <section className="bg-white px-4 py-16 md:px-6 lg:px-8 lg:py-24">
@@ -559,46 +491,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] bg-gradient-to-r from-[#102A5C] via-[#143066] to-[#2957A4] px-6 py-12 shadow-[0_24px_55px_rgba(20,48,102,0.22)] md:px-10 lg:px-14">
-          <motion.div
-            className="grid gap-10 lg:grid-cols-[1.15fr,0.85fr] lg:items-center"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.25 }}
-          >
-            <motion.div variants={fadeUp}>
-              <SectionIntro
-                eyebrow="Let’s Work Together"
-                title="Ready to Build Stronger Brand and Event Experiences?"
-                description="Partner with eLive to improve communication, audience engagement, event coordination, and brand visibility through one dependable team."
-                light
-              />
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              className="flex flex-wrap gap-4 lg:justify-end lg:self-end"
-            >
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(243,154,31,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
-              >
-                Contact Us
-              </Link>
-
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold !text-white shadow-[0_10px_24px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20"
-              >
-                View Services
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-    </main>
+        </main>
   );
 }

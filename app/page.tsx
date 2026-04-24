@@ -354,13 +354,13 @@ export default function HomePage() {
                 variants={fadeUp}
                 className="mt-8 flex flex-wrap gap-4"
               >
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white shadow-[0_14px_34px_rgba(243,154,31,0.26)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
-                >
-                  Get Started
-                  <ArrowRight size={18} />
-                </Link>
+           <Link
+  href="/contact"
+  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+>
+  <span className="text-white">Get Started</span>
+  <ArrowRight size={18} className="text-white" />
+</Link>
 
          <Link
   href="/services"
@@ -643,12 +643,12 @@ export default function HomePage() {
               </StaggerGroup>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(243,154,31,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
-                >
-                  Talk to Us
-                </Link>
+          <Link
+  href="/contact"
+  className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+>
+  Talk to Us
+</Link>
 
 <Link
   href="/services"
@@ -812,7 +812,7 @@ export default function HomePage() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(243,154,31,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+                 className="inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
               >
                 Get Started
               </Link>

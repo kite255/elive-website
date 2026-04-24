@@ -8,9 +8,10 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/bulksms", label: "Bulk SMS" },
+  { href: "/cards-tickets", label: "Cards & Tickets" },
+  { href: "/creative-design", label: "Creative Design" },
+   { href: "/multimedia", label: "Multimedia" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -69,7 +70,7 @@ export default function Header() {
             href="/contact"
             className="rounded-full bg-[#F39A1F] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#E68613]"
           >
-            Request a Quote
+            <span className="text-white">Request a Quote</span>
           </Link>
         </div>
 
@@ -108,13 +109,13 @@ export default function Header() {
               );
             })}
 
-            <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-[#F39A1F] px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#E68613]"
-            >
-              Request a Quote
-            </Link>
+         <Link
+  href="/contact"
+  onClick={() => setOpen(false)}
+  className="mt-4 rounded-full bg-[#F39A1F] px-5 py-3 text-center text-sm font-semibold !text-white transition hover:bg-[#E68613]"
+>
+  <span className="text-white">Request a Quote</span>
+</Link>
           </nav>
         </div>
       )}
