@@ -37,7 +37,7 @@ export default function Footer() {
           <Link
             href="https://wa.me/255777792017"
             target="_blank"
-            className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-white transition hover:border-[#FF9800] hover:bg-white/5"
+            className="mt-5 elive-btn elive-btn-secondary"
           >
             <MessageCircle size={16} className="text-[#FF9800]" />
             WhatsApp
