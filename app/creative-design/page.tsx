@@ -293,7 +293,7 @@ export default function CreativeDesignPage() {
 <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
   <Link
     href="/contact"
-    className="group inline-flex items-center justify-center rounded-xl bg-[var(--color-elive-accent)] px-8 py-3.5 text-sm font-medium !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+    className="group inline-flex min-h-[52px] items-center justify-center rounded-xl bg-[var(--color-elive-accent)] px-7 py-3 text-sm font-semibold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
   >
     Request Creative Design
     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -301,7 +301,7 @@ export default function CreativeDesignPage() {
 
   <Link
     href="#services"
-    className="inline-flex items-center justify-center rounded-xl border border-white/35 bg-white/10 px-8 py-3.5 text-sm font-medium !text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/15"
+    className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/35 bg-white/10 px-7 py-3 text-sm font-semibold !text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/15"
   >
     View Features
   </Link>
