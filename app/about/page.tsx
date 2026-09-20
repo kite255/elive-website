@@ -293,7 +293,7 @@ export default function AboutPage() {
               </motion.div>
             </motion.div>
           </div>
-        </div>
+
           <div className="absolute inset-x-0 bottom-0 h-1 bg-[var(--color-elive-accent)]" />
         </div>
       </section>
