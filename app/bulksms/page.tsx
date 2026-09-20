@@ -212,85 +212,90 @@ export default function BulkSmsPage() {
   return (
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
   
-      {/* HERO */}
-      <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#161943] shadow-[0_18px_45px_rgba(15,35,76,0.12)]">
-          <div className="absolute inset-0">
-            <Image
-              src="/hero.jpg"
-              alt="eLive bulk SMS"
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover object-center"
+     {/* HERO */}<section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
+  <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
+    <div className="absolute inset-0">
+      <Image
+        src="/hero.jpg"
+        alt="eLive bulk SMS"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#007AB2]/88 to-[#161943]/72" />
+    </div>
+
+    <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+      <motion.div
+        className="max-w-3xl"
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
+      >
+        <motion.p
+          variants={fadeUp}
+          className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
+        >
+          eLive SMS
+        </motion.p>
+
+        <motion.h1
+          variants={fadeUp}
+          className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
+        >
+          <span className="block text-white">
+            Flexible Bulk SMS
+          </span>
+          <span className="block text-[var(--color-elive-accent)]">
+            for Promotions, Alerts, Reminders, and Customer Updates
+          </span>
+        </motion.h1>
+
+        <motion.p
+          variants={fadeUp}
+          className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
+        >
+          Reach your audience quickly through a professional bulk messaging
+          solution built for business communication, campaign delivery,
+          alerts, reminders, and customer engagement.
+        </motion.p>
+
+        <motion.div
+          variants={fadeUp}
+          className="mt-8 flex flex-wrap gap-4"
+        >
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:bg-[var(--color-elive-accent-dark)]"
+          >
+            <span className="text-white">Request Bulk SMS</span>
+            <ArrowRight
+              size={18}
+              className="text-white transition-transform duration-200 group-hover:translate-x-0.5"
             />
-          </div>
+          </Link>
 
-          <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              animate="visible"
-              className="max-w-3xl"
-            >
-              <motion.p
-                variants={fadeUp}
-                className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--color-elive-accent)]"
-              >
-                eLive SMS
-              </motion.p>
+          <Link
+            href="#sms-pricing"
+            className="inline-flex items-center justify-center rounded-full border border-white/50 bg-white/8 px-7 py-3.5 text-base font-semibold !text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/14"
+          >
+            View Pricing
+          </Link>
 
-              <motion.h1
-                variants={fadeUp}
-                className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[60px] lg:leading-[1.08]"
-              >
-                <span className="block text-white">Flexible Bulk SMS</span>
-                <span className="block text-[var(--color-elive-accent)]">
-                  for Promotions, Alerts, Reminders, and Customer Updates
-                </span>
-              </motion.h1>
-
-              <motion.p
-                variants={fadeUp}
-                className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
-              >
-                Reach your audience quickly through a professional bulk messaging
-                solution built for business communication, campaign delivery,
-                alerts, reminders, and customer engagement.
-              </motion.p>
-
-              <motion.div
-                variants={fadeUp}
-                className="mt-8 flex flex-wrap gap-4"
-              >
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-8 py-3.5 text-sm font-bold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
-                >
-                  Request Bulk SMS
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
-
-                <Link
-                  href="#sms-pricing"
-                  className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-8 py-3.5 text-sm font-bold !text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/15"
-                >
-                  View Pricing
-                </Link>
-
-                <Link
-                  href="https://message.elive.co.tz/auth/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-8 py-3.5 text-sm font-bold !text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/15"
-                >
-                  Login eLive SMS
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+         <Link
+  href="https://message.elive.co.tz/auth/login"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3.5 text-base font-semibold !text-white transition-all duration-200 hover:border-white hover:bg-white/10"
+>
+  Login eLive SMS
+</Link>
+        </motion.div>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* OVERVIEW */}
       <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
