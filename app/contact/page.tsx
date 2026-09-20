@@ -204,7 +204,7 @@ export default function ContactPage() {
 
           <button
   type="button"
-  className="mt-2 group inline-flex w-fit items-center gap-2 rounded-full bg-[#161943] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(37,70,140,0.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F1233]"
+  className="mt-2 group w-fit elive-btn elive-btn-dark"
 >
   <span className="text-black">Send Message</span>
   <Send
@@ -262,7 +262,7 @@ export default function ContactPage() {
            <Link
   href="https://wa.me/255777792017"
   target="_blank"
-  className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#FF9800] px-6 py-3 text-sm font-semibold text-white border border-[#FF9800] transition-colors duration-200 hover:bg-[#E88700]"
+  className="mt-6 elive-btn elive-btn-primary"
 >
   <span className="text-white">Chat on WhatsApp</span>
   <ArrowRight size={17} className="text-white" />
