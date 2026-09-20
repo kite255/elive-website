@@ -169,7 +169,7 @@ function SectionIntro({
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
           light
             ? "!text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.30)]"
-            : "text-[#143066]"
+            : "text-[#161943]"
         } ${titleClassName}`}
       >
         {title}
@@ -251,7 +251,7 @@ export default function MultimediaPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#007AB2]/88 to-[#161943]/72" />
           </div>
 
           <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
@@ -328,7 +328,7 @@ export default function MultimediaPage() {
 <Reveal>
   <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_45px_rgba(15,35,76,0.06)] md:p-10">
     
-    <h3 className="text-2xl font-black leading-tight text-[#143066] md:text-3xl">
+    <h3 className="text-2xl font-black leading-tight text-[#161943] md:text-3xl">
       Built for live delivery, visual clarity, and audience engagement
     </h3>
 
@@ -349,7 +349,7 @@ export default function MultimediaPage() {
           className="flex items-center gap-3 rounded-2xl bg-[var(--color-elive-light)] px-5 py-4 transition-all duration-200 hover:bg-slate-100"
         >
           <CheckCircle2 className="h-5 w-5 shrink-0 text-[var(--color-elive-accent)]" />
-          <p className="text-sm leading-7 text-[#143066] md:text-[15px]">
+          <p className="text-sm leading-7 text-[#161943] md:text-[15px]">
             {item}
           </p>
         </div>
@@ -386,11 +386,11 @@ export default function MultimediaPage() {
                   whileHover={{ y: -8 }}
                   className="group rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_24px_50px_rgba(15,35,76,0.14)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/10 p-3 text-[#143066] transition-all duration-300 group-hover:bg-[#143066] group-hover:text-white">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/10 p-3 text-[#161943] transition-all duration-300 group-hover:bg-[#161943] group-hover:text-white">
                     <Icon size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-xl font-black text-[#143066]">
+                  <h3 className="mt-5 text-xl font-black text-[#161943]">
                     {item.title}
                   </h3>
 
@@ -425,7 +425,7 @@ export default function MultimediaPage() {
                 whileHover={{ y: -6 }}
                 className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_10px_24px_rgba(15,35,76,0.05)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
               >
-                <h3 className="text-lg font-black text-[#143066] md:text-xl">
+                <h3 className="text-lg font-black text-[#161943] md:text-xl">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-[15px] leading-7 text-slate-600">
@@ -460,7 +460,7 @@ export default function MultimediaPage() {
                 <div className="text-2xl font-black text-[var(--color-elive-accent)] md:text-3xl">
                   {item.step}
                 </div>
-                <h3 className="mt-3 text-lg font-black text-[#143066] md:text-xl">
+                <h3 className="mt-3 text-lg font-black text-[#161943] md:text-xl">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-[15px] leading-7 text-slate-600">
