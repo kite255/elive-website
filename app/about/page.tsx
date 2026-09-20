@@ -299,7 +299,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      /* MISSION & VISION */}
+      {/* MISSION & VISION */}
       <section className="bg-white px-4 py-16 md:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
