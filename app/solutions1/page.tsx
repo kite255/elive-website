@@ -225,7 +225,7 @@ export default function SolutionsPage() {
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-4 text-4xl font-black leading-[1.05] md:text-5xl lg:text-[64px]"
+                className="mt-4 text-4xl font-extrabold leading-[1.05] md:text-5xl lg:text-[64px]"
               >
                 <span className="block text-white">Digital Solutions That Simplify Work</span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
