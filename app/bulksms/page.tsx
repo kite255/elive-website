@@ -265,7 +265,7 @@ export default function BulkSmsPage() {
         >
           <Link
             href="/contact"
-            className="group inline-flex min-h-[52px] items-center gap-2 rounded-xl bg-[var(--color-elive-accent)] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-[var(--color-elive-accent-dark)]"
+            className="group elive-btn elive-btn-primary"
           >
             <span className="text-white">Request Bulk SMS</span>
             <ArrowRight
@@ -276,7 +276,7 @@ export default function BulkSmsPage() {
 
           <Link
             href="#sms-pricing"
-            className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/50 bg-white/8 px-7 py-3 text-sm font-semibold !text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/14"
+            className="elive-btn elive-btn-secondary"
           >
             View Pricing
           </Link>
@@ -285,7 +285,7 @@ export default function BulkSmsPage() {
   href="https://message.elive.co.tz/auth/login"
   target="_blank"
   rel="noopener noreferrer"
-  className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/30 px-7 py-3 text-sm font-semibold !text-white transition-all duration-200 hover:border-white hover:bg-white/10"
+  className="elive-btn elive-btn-secondary"
 >
   Login eLive SMS
 </Link>
