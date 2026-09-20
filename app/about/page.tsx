@@ -252,12 +252,6 @@ export default function AboutPage() {
               animate="visible"
               variants={staggerContainer}
             >
-              <motion.div variants={fadeUp}>
-                <span className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm">
-                  About eLive
-                </span>
-              </motion.div>
-
               <motion.h1
                 variants={fadeUp}
                 className="mt-7 max-w-[720px] text-[2.2rem] font-extrabold leading-[1.06] tracking-[-0.025em] md:text-[2.75rem] lg:text-[52px]"
