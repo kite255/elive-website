@@ -371,8 +371,9 @@ select:focus {
 }
 
 .elive-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.48);
+  background: #ffffff;
+  color: var(--color-elive-primary);
+  border-color: #ffffff;
 }
 
 .elive-btn-light {
