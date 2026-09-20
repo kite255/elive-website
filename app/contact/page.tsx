@@ -73,7 +73,7 @@ const services = [
 
 export default function ContactPage() {
   return (
-    <main className="overflow-hidden bg-[#F7F8FA] text-[#24324A]">
+    <main className="overflow-hidden bg-[#F7F8FA] text-[#161943]">
       {/* HERO */}
       <section className="relative px-4 py-20 md:px-6 lg:px-8 lg:py-28">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(37,70,140,0.16),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(243,154,31,0.16),transparent_34%)]" />
@@ -86,7 +86,7 @@ export default function ContactPage() {
         >
       
 
-          <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-bold tracking-tight text-[#24324A] md:text-6xl">
+          <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-bold tracking-tight text-[#161943] md:text-6xl">
             Let’s Build Something Great Together
           </h1>
 
@@ -114,11 +114,11 @@ export default function ContactPage() {
                 key={item.title}
                 href={item.href}
                 variants={fadeUp}
-                className="group relative overflow-hidden rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_16px_40px_rgba(15,35,76,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#25468c]/20 hover:shadow-[0_24px_60px_rgba(15,35,76,0.12)]"
+                className="group relative overflow-hidden rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_16px_40px_rgba(15,35,76,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#161943]/20 hover:shadow-[0_24px_60px_rgba(15,35,76,0.12)]"
               >
-                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-[#25468c]/5 transition group-hover:bg-[#f39a1f]/10" />
+                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-[#161943]/5 transition group-hover:bg-[#FF9800]/10" />
 
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-[#25468c]/10 text-[#25468c] transition group-hover:bg-[#25468c] group-hover:text-white">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-[#161943]/10 text-[#161943] transition group-hover:bg-[#161943] group-hover:text-white">
                   <Icon size={22} />
                 </div>
 
@@ -126,7 +126,7 @@ export default function ContactPage() {
                   {item.title}
                 </h3>
 
-                <p className="relative mt-2 text-sm font-semibold text-[#25468c]">
+                <p className="relative mt-2 text-sm font-semibold text-[#161943]">
                   {item.value}
                 </p>
 
@@ -150,7 +150,7 @@ export default function ContactPage() {
             viewport={{ once: true, amount: 0.2 }}
             className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_22px_60px_rgba(15,35,76,0.08)] md:p-8"
           >
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#f39a1f]">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF9800]">
               Send Inquiry
             </span>
 
@@ -181,7 +181,7 @@ export default function ContactPage() {
                     Service Interested In
                   </label>
 
-                  <select className="mt-2 w-full rounded-2xl border border-slate-200 bg-[#F7F8FA] px-4 py-3 text-sm outline-none transition focus:border-[#25468c] focus:bg-white">
+                  <select className="mt-2 w-full rounded-2xl border border-slate-200 bg-[#F7F8FA] px-4 py-3 text-sm outline-none transition focus:border-[#161943] focus:bg-white">
                     <option>Select service</option>
                     {services.map((service) => (
                       <option key={service}>{service}</option>
@@ -198,13 +198,13 @@ export default function ContactPage() {
                 <textarea
                   rows={6}
                   placeholder="Tell us what you need..."
-                  className="mt-2 w-full resize-none rounded-2xl border border-slate-200 bg-[#F7F8FA] px-4 py-3 text-sm outline-none transition focus:border-[#25468c] focus:bg-white"
+                  className="mt-2 w-full resize-none rounded-2xl border border-slate-200 bg-[#F7F8FA] px-4 py-3 text-sm outline-none transition focus:border-[#161943] focus:bg-white"
                 />
               </div>
 
           <button
   type="button"
-  className="mt-2 group inline-flex w-fit items-center gap-2 rounded-full bg-[#25468c] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(37,70,140,0.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1e3770]"
+  className="mt-2 group inline-flex w-fit items-center gap-2 rounded-full bg-[#161943] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(37,70,140,0.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F1233]"
 >
   <span className="text-black">Send Message</span>
   <Send
@@ -223,7 +223,7 @@ export default function ContactPage() {
             viewport={{ once: true, amount: 0.2 }}
             className="flex flex-col space-y-6"
           >
-            <div className="flex-1 rounded-[2rem] bg-[#25468c] p-7 text-white shadow-[0_22px_60px_rgba(37,70,140,0.22)]">
+            <div className="flex-1 rounded-[2rem] bg-[#161943] p-7 text-white shadow-[0_22px_60px_rgba(37,70,140,0.22)]">
   <h3 className="text-2xl font-bold !text-white">
   Office Information
 </h3>
@@ -262,7 +262,7 @@ export default function ContactPage() {
            <Link
   href="https://wa.me/255777792017"
   target="_blank"
-  className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#f39a1f] px-6 py-3 text-sm font-semibold text-white border border-[#f39a1f] transition-colors duration-200 hover:bg-[#e68613]"
+  className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#FF9800] px-6 py-3 text-sm font-semibold text-white border border-[#FF9800] transition-colors duration-200 hover:bg-[#E88700]"
 >
   <span className="text-white">Chat on WhatsApp</span>
   <ArrowRight size={17} className="text-white" />
@@ -277,7 +277,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_22px_60px_rgba(15,35,76,0.08)]">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
             <div className="p-8 md:p-10">
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#f39a1f]">
+              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FF9800]">
                 Visit Us
               </span>
 
@@ -297,7 +297,7 @@ export default function ContactPage() {
                   "Branding and communication guidance",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <CheckCircle2 size={18} className="text-[#f39a1f]" />
+                    <CheckCircle2 size={18} className="text-[#FF9800]" />
                     <span className="text-sm font-medium text-slate-600">
                       {item}
                     </span>
@@ -337,7 +337,7 @@ function Input({
       <input
         type={type}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-2xl border border-slate-200 bg-[#F7F8FA] px-4 py-3 text-sm outline-none transition focus:border-[#25468c] focus:bg-white"
+        className="mt-2 w-full rounded-2xl border border-slate-200 bg-[#F7F8FA] px-4 py-3 text-sm outline-none transition focus:border-[#161943] focus:bg-white"
       />
     </div>
   );
@@ -355,7 +355,7 @@ function Info({
   return (
     <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur-sm">
       
-      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-[#f39a1f]">
+      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-[#FF9800]">
         <Icon size={20} />
       </div>
 
