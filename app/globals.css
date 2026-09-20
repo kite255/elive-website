@@ -55,6 +55,14 @@
 
 @font-face {
   font-family: "Creato Display";
+  src: url("/fonts/creato/CreatoDisplay-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
   src: url("/fonts/creato/CreatoDisplay-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
@@ -110,6 +118,7 @@ ol[role="list"] {
    BASE PAGE STYLE
 ========================= */
 body {
+  font-synthesis: none;
   background:
     radial-gradient(circle at top left, rgba(0, 122, 178, 0.06), transparent 22%),
     radial-gradient(circle at top right, rgba(255, 152, 0, 0.06), transparent 20%),
