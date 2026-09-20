@@ -278,7 +278,7 @@ export default function AboutPage() {
               <motion.div variants={fadeUp} className="mt-9 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-2xl bg-[var(--color-elive-accent)] px-7 py-4 text-base font-medium text-white transition-all duration-300 hover:bg-[var(--color-elive-accent-dark)]"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-elive-accent)] px-7 py-4 text-base font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
                 >
                   <span className="text-white">Work With Us</span>
                   <ArrowRight size={18} className="text-white" />
@@ -286,7 +286,7 @@ export default function AboutPage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-2xl border border-white/35 bg-white/10 px-7 py-4 text-base font-medium !text-white backdrop-blur-sm transition duration-300 hover:border-white/60 hover:bg-white/15"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/8 px-7 py-4 text-base font-medium !text-white backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-white/45 hover:bg-white/12"
                 >
                   Explore Services
                 </Link>
