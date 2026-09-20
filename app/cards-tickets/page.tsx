@@ -272,7 +272,7 @@ export default function CardsAndTicketsPage() {
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
+                className="mt-5 text-4xl font-extrabold leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
               >
                 <span className="block text-white">
                   Registration, Cards & Tickets
