@@ -292,7 +292,7 @@ export default function CardsAndTicketsPage() {
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
   <Link
     href="/contact"
-    className="group inline-flex items-center gap-2 rounded-xl bg-[var(--color-elive-accent)] px-7 py-3 text-sm font-semibold !text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+    className="group inline-flex min-h-[52px] items-center gap-2 rounded-xl bg-[var(--color-elive-accent)] px-7 py-3 text-sm font-semibold !text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
   >
     Start Your Event
     <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
@@ -300,14 +300,14 @@ export default function CardsAndTicketsPage() {
 
   <Link
     href="/elive-cards-gallery"
-    className="inline-flex items-center justify-center rounded-xl border border-white/40 bg-white px-7 py-3 text-sm font-semibold text-[#161943] shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
+    className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/40 bg-white px-7 py-3 text-sm font-semibold text-[#161943] shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
   >
     View Digital Card Gallery
   </Link>
 
   <Link
     href="#event-features"
-    className="inline-flex items-center justify-center rounded-xl border border-white/40 bg-white/10 px-7 py-3 text-sm font-semibold !text-white backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/15"
+    className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/40 bg-white/10 px-7 py-3 text-sm font-semibold !text-white backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/15"
   >
     Explore Services
   </Link>
