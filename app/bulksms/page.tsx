@@ -214,21 +214,15 @@ export default function BulkSmsPage() {
   
      {/* HERO */}<section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
   <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
-    <div className="absolute inset-0">
-      <Image
-        src="/hero.jpg"
-        alt="eLive bulk SMS"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#007AB2]/88 to-[#161943]/72" />
-    </div>
+    <div className="absolute inset-0 bg-gradient-to-r from-[#161943] via-[#007AB2] to-[#161943]" />
+    <div className="absolute -right-24 -top-32 h-[420px] w-[420px] rounded-full bg-white/10 blur-3xl" />
+    <div className="absolute bottom-[-180px] left-[28%] h-[360px] w-[360px] rounded-full bg-[#007AB2]/35 blur-3xl" />
+    <div className="absolute right-[8%] top-[18%] h-32 w-32 rounded-full border border-white/10" />
+    <div className="absolute right-[17%] top-[37%] h-56 w-56 rounded-full border border-white/10" />
 
-    <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+    <div className="relative px-6 py-14 md:px-10 md:py-18 lg:px-14 lg:py-20">
       <motion.div
-        className="max-w-3xl"
+        className="max-w-[860px]"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
@@ -242,19 +236,19 @@ export default function BulkSmsPage() {
 
         <motion.h1
           variants={fadeUp}
-          className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
+          className="mt-4 text-[2.35rem] font-black leading-[1.02] md:text-[3.15rem] lg:text-[3.65rem]"
         >
           <span className="block text-white">
             Flexible Bulk SMS
           </span>
-          <span className="block text-[var(--color-elive-accent)]">
+          <span className="mt-1 block max-w-[820px] text-[var(--color-elive-accent)]">
             for Promotions, Alerts, Reminders, and Customer Updates
           </span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
-          className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
+          className="mt-5 max-w-[720px] text-base leading-7 text-white/90 md:text-[17px] md:leading-8"
         >
           Reach your audience quickly through a professional bulk messaging
           solution built for business communication, campaign delivery,
@@ -263,7 +257,7 @@ export default function BulkSmsPage() {
 
         <motion.div
           variants={fadeUp}
-          className="mt-8 flex flex-wrap gap-4"
+          className="mt-7 flex flex-wrap items-center gap-3"
         >
           <Link
             href="/contact"
@@ -278,7 +272,7 @@ export default function BulkSmsPage() {
 
           <Link
             href="#sms-pricing"
-            className="inline-flex items-center justify-center rounded-full border border-white/50 bg-white/8 px-7 py-3.5 text-base font-semibold !text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/14"
+            className="inline-flex items-center justify-center rounded-full border border-white/70 bg-white/10 px-7 py-3.5 text-base font-semibold !text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/18"
           >
             View Pricing
           </Link>
@@ -287,7 +281,7 @@ export default function BulkSmsPage() {
   href="https://message.elive.co.tz/auth/login"
   target="_blank"
   rel="noopener noreferrer"
-  className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3.5 text-base font-semibold !text-white transition-all duration-200 hover:border-white hover:bg-white/10"
+  className="inline-flex items-center justify-center px-4 py-3 text-sm font-semibold !text-white/80 transition-colors duration-200 hover:!text-white md:text-base"
 >
   Login eLive SMS
 </Link>
