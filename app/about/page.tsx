@@ -260,22 +260,22 @@ export default function AboutPage() {
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-7 max-w-[720px] text-[2.1rem] font-normal leading-[1.07] tracking-[-0.025em] md:text-[2.6rem] lg:text-[48px]"
+                className="mt-7 max-w-[720px] text-[2.2rem] font-normal leading-[1.06] tracking-[-0.025em] md:text-[2.75rem] lg:text-[52px]"
               >
                 <span className="block text-white">Technology, Communication & Creative Solutions</span>
-                <span className="mt-2 block text-[0.88em] text-[var(--color-elive-accent)]">
+                <span className="mt-2 block text-[0.92em] text-[var(--color-elive-accent)]">
                   Built Around Your Business
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={fadeUp}
-                className="mt-7 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
+                className="mt-8 max-w-[650px] text-base leading-8 text-white/90 md:text-lg"
               >
                 eLive helps businesses, institutions, and event organizers communicate better through messaging, event technology, branding, creative design, and professional media support.
               </motion.p>
 
-              <motion.div variants={fadeUp} className="mt-10 flex flex-wrap gap-4">
+              <motion.div variants={fadeUp} className="mt-9 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-2xl bg-[var(--color-elive-accent)] px-7 py-4 text-base font-medium text-white transition-all duration-300 hover:bg-[var(--color-elive-accent-dark)]"
