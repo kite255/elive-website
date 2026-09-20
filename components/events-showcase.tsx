@@ -235,7 +235,7 @@ export default function EventsShowcase() {
                         href={action.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-5 py-2.5 text-sm font-semibold !text-white transition hover:bg-[var(--color-elive-accent-dark)]"
+                        className="elive-btn elive-btn-primary"
                       >
                         {event.kind === "ticket" ||
                         event.kind === "registration_and_ticket" ? (
