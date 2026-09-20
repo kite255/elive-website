@@ -260,7 +260,7 @@ export default function AboutPage() {
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-4 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.02]"
+                className="mt-4 text-4xl font-black leading-tight md:text-5xl lg:text-[60px] lg:leading-[1.03]"
               >
                 <span className="block text-white">Technology, Communication & Creative Solutions</span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
