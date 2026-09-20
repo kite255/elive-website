@@ -273,10 +273,10 @@ export default function MultimediaPage() {
                 className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
               >
                 <span className="block text-white">
-                  Professional Multimedia Support
+                  Professional Multimedia for Every Event
                 </span>
                 <span className="block text-[var(--color-elive-accent)]">
-                  for Events, Campaigns, and Live Experiences
+                  Bring Every Experience to Life
                 </span>
               </motion.h1>
 
@@ -284,10 +284,7 @@ export default function MultimediaPage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
               >
-                eLive provides live streaming, videography, photography, screen
-                display, projection, and digital promotion support to help
-                organizations deliver stronger, clearer, and more engaging event
-                experiences.
+                From live streaming and videography to photography, projection, and screen display, eLive helps you deliver polished and engaging event experiences.
               </motion.p>
 
               <motion.div
