@@ -323,3 +323,82 @@ select:focus {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =========================
+   SHARED BUTTON SYSTEM
+========================= */
+.elive-btn {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.elive-btn:hover {
+  transform: translateY(-2px);
+}
+
+.elive-btn-primary {
+  background: var(--color-elive-accent);
+  color: #fff;
+  border: 1px solid var(--color-elive-accent);
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.14);
+}
+
+.elive-btn-primary:hover {
+  background: var(--color-elive-accent-dark);
+  border-color: var(--color-elive-accent-dark);
+}
+
+.elive-btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(6px);
+}
+
+.elive-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.48);
+}
+
+.elive-btn-light {
+  background: #fff;
+  color: var(--color-elive-primary);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.elive-btn-light:hover {
+  background: #f7f8fa;
+}
+
+.elive-btn-dark {
+  background: var(--color-elive-primary);
+  color: #fff;
+  border: 1px solid var(--color-elive-primary);
+}
+
+.elive-btn-dark:hover {
+  background: var(--color-elive-primary-dark);
+  border-color: var(--color-elive-primary-dark);
+}
+
+@media (max-width: 640px) {
+  .elive-btn {
+    min-height: 48px;
+    padding: 0.7rem 1.35rem;
+  }
+}
