@@ -253,14 +253,14 @@ export default function AboutPage() {
               variants={staggerContainer}
             >
               <motion.div variants={fadeUp}>
-                <p className="text-sm font-medium uppercase tracking-[0.22em] text-[var(--color-elive-accent)] md:text-[15px]">
+                <span className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm">
                   About eLive
-                </p>
+                </span>
               </motion.div>
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-4 text-[2.25rem] font-normal leading-[1.05] md:text-[2.9rem] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
+                className="mt-7 max-w-[760px] text-[2.4rem] font-normal leading-[1.06] tracking-[-0.03em] md:text-[3rem] lg:text-[54px]"
               >
                 <span className="block text-white">Technology, Communication & Creative Solutions</span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
@@ -270,15 +270,15 @@ export default function AboutPage() {
 
               <motion.p
                 variants={fadeUp}
-                className="mt-6 max-w-2xl text-base leading-8 text-white/85 md:text-lg"
+                className="mt-7 max-w-xl text-base leading-8 text-white/90 md:text-lg"
               >
                 eLive helps businesses, institutions, and event organizers communicate better through messaging, event technology, branding, creative design, and professional media support.
               </motion.p>
 
-              <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
+              <motion.div variants={fadeUp} className="mt-9 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--color-elive-accent-dark)]"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-[var(--color-elive-accent)] px-7 py-4 text-base font-medium text-white transition-all duration-300 hover:bg-[var(--color-elive-accent-dark)]"
                 >
                   <span className="text-white">Work With Us</span>
                   <ArrowRight size={18} className="text-white" />
@@ -286,13 +286,15 @@ export default function AboutPage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-7 py-3.5 text-sm font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/35 bg-white/10 px-7 py-4 text-base font-medium !text-white backdrop-blur-sm transition duration-300 hover:border-white/60 hover:bg-white/15"
                 >
                   Explore Services
                 </Link>
               </motion.div>
             </motion.div>
           </div>
+        </div>
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-[var(--color-elive-accent)]" />
         </div>
       </section>
 
