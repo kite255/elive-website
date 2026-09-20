@@ -296,7 +296,7 @@ export default function HomePage() {
             >
               <motion.h1
                 variants={fadeUp}
-                className="text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.02]"
+                className="text-4xl font-extrabold leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.02]"
               >
                 <span className="block text-white">
                   Smart Solutions for Communication & Events
