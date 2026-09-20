@@ -123,7 +123,7 @@ function SectionIntro({
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
           light
             ? "!text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.30)]"
-            : "text-[#143066]"
+            : "text-[#161943]"
         } ${titleClassName}`}
       >
         {title}
@@ -205,7 +205,7 @@ export default function SolutionsPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#007AB2]/88 to-[#161943]/72" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(243,154,31,0.08),transparent_26%)]" />
           </div>
 
@@ -279,7 +279,7 @@ export default function SolutionsPage() {
           </Reveal>
 
           <Reveal>
-            <div className="rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] p-8 text-white shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
+            <div className="rounded-[2rem] bg-gradient-to-br from-[#161943] via-[#007AB2] to-[#007AB2] p-8 text-white shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
               <p className="text-base leading-8 text-white/95 md:text-[17px]">
                 At eLive, we go beyond traditional services by building
                 intelligent solutions that help organizations operate more
@@ -315,7 +315,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* SOLUTIONS GRID */}
-      <section className="bg-[#143066] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
+      <section className="bg-[#161943] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionIntro
@@ -367,7 +367,7 @@ export default function SolutionsPage() {
 
       {/* CTA */}
       <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] bg-gradient-to-r from-[#102A5C] via-[#143066] to-[#2957A4] px-6 py-12 text-white shadow-[0_24px_55px_rgba(20,48,102,0.22)] md:px-10 lg:px-14">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] bg-gradient-to-r from-[#007AB2] via-[#161943] to-[#007AB2] px-6 py-12 text-white shadow-[0_24px_55px_rgba(20,48,102,0.22)] md:px-10 lg:px-14">
           <motion.div
             className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center"
             variants={staggerContainer}
