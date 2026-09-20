@@ -269,7 +269,7 @@ export default function CreativeDesignPage() {
               </motion.p>
 <motion.h1
   variants={fadeUp}
-  className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[60px] lg:leading-[1.08]"
+  className="mt-5 text-4xl font-extrabold leading-tight md:text-5xl lg:text-[60px] lg:leading-[1.08]"
 >
   <span className="block text-white">
     Creative Design That Strengthens Your Brand
