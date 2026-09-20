@@ -206,10 +206,10 @@ export default function ContactPage() {
   type="button"
   className="mt-2 group w-fit elive-btn elive-btn-dark"
 >
-  <span className="text-black">Send Message</span>
+  <span>Send Message</span>
   <Send
     size={17}
-    className="text-black transition group-hover:translate-x-1"
+    className="transition group-hover:translate-x-1"
   />
 </button>
             </form>
