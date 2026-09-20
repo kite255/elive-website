@@ -263,13 +263,13 @@ export default function CreativeDesignPage() {
             >
               <motion.p
                 variants={fadeUp}
-                className="text-sm font-medium uppercase tracking-[0.24em] text-[var(--color-elive-accent)]"
+                className="text-4xl font-extrabold uppercase tracking-[0.24em] text-[var(--color-elive-accent)] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:leading-[1.03] lg:tracking-[-0.035em]"
               >
                 Creative Design
               </motion.p>
 <motion.h1
   variants={fadeUp}
-  className="mt-5 text-4xl font-medium leading-tight md:text-5xl lg:text-[60px] lg:leading-[1.08]"
+  className="mt-5 text-4xl font-extrabold leading-tight md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:leading-[1.08] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
 >
   <span className="block text-white">
     Creative Design That Strengthens Your Brand
@@ -293,7 +293,7 @@ export default function CreativeDesignPage() {
 <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
   <Link
     href="/contact"
-    className="group inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-8 py-3.5 text-sm font-medium !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+    className="group inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-8 py-3.5 text-4xl font-extrabold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:leading-[1.03] lg:tracking-[-0.035em]"
   >
     Request Creative Design
     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -301,7 +301,7 @@ export default function CreativeDesignPage() {
 
   <Link
     href="#services"
-    className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-8 py-3.5 text-sm font-medium !text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/15"
+    className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-8 py-3.5 text-4xl font-extrabold !text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/15 lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:leading-[1.03] lg:tracking-[-0.035em]"
   >
     View Features
   </Link>
