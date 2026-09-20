@@ -227,9 +227,9 @@ export default function SolutionsPage() {
                 variants={fadeUp}
                 className="mt-4 text-4xl font-black leading-[1.05] md:text-5xl lg:text-[64px]"
               >
-                <span className="block text-white">Smart Digital Solutions</span>
+                <span className="block text-white">Digital Solutions That Simplify Work</span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
-                  for Communication and Events
+                  Communication, Events & Engagement
                 </span>
               </motion.h1>
 
@@ -237,10 +237,7 @@ export default function SolutionsPage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
               >
-                We design and deliver integrated digital tools that simplify
-                communication, enhance engagement, and support successful events
-                and business operations with greater efficiency and measurable
-                impact.
+                eLive builds practical digital tools for messaging, events, and customer engagement—helping organizations communicate, coordinate, and operate more efficiently.
               </motion.p>
 
               <motion.div
