@@ -293,7 +293,7 @@ export default function MultimediaPage() {
               >
                <Link
     href="/contact"
-    className="group inline-flex min-h-[52px] items-center justify-center rounded-xl bg-[var(--color-elive-accent)] px-6 py-3 text-sm font-semibold !text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+    className="group elive-btn elive-btn-primary"
   >
     Request Multimedia Support
     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
