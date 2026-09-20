@@ -262,9 +262,9 @@ export default function AboutPage() {
                 variants={fadeUp}
                 className="mt-4 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.02]"
               >
-                <span className="block text-white">Built to Help Brands</span>
+                <span className="block text-white">Technology, Communication & Creative Solutions</span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
-                  Communicate, Organize & Stand Out
+                  Built Around Your Business
                 </span>
               </motion.h1>
 
@@ -272,10 +272,7 @@ export default function AboutPage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/85 md:text-lg"
               >
-                eLive is a communication and marketing solutions company focused
-                on helping businesses and events engage their audiences through
-                smart messaging, structured event support, strong branding, and
-                professional media execution.
+                eLive helps businesses, institutions, and event organizers communicate better through messaging, event technology, branding, creative design, and professional media support.
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
