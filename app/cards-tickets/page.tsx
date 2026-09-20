@@ -173,7 +173,7 @@ function SectionIntro({
 
       <h2
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
-          light ? "!text-white" : "text-[#143066]"
+          light ? "!text-white" : "text-[#161943]"
         } ${titleClassName}`}
       >
         {title}
@@ -243,7 +243,7 @@ export default function CardsAndTicketsPage() {
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
       <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(22,25,67,0.18)]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -253,7 +253,7 @@ export default function CardsAndTicketsPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#161943]/88 to-[#161943]/72" />
           </div>
 
           <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
@@ -300,7 +300,7 @@ export default function CardsAndTicketsPage() {
 
   <Link
     href="/elive-cards-gallery"
-    className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white px-7 py-3 text-sm font-semibold text-[#143066] shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
+    className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white px-7 py-3 text-sm font-semibold text-[#161943] shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
   >
     View Digital Card Gallery
   </Link>
@@ -329,9 +329,9 @@ export default function CardsAndTicketsPage() {
           </Reveal>
 
          <Reveal>
-  <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_45px_rgba(15,35,76,0.06)] md:p-10">
+  <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_45px_rgba(22,25,67,0.06)] md:p-10">
     
-    <h3 className="text-2xl font-black leading-tight text-[#143066] md:text-3xl">
+    <h3 className="text-2xl font-black leading-tight text-[#161943] md:text-3xl">
       Built for registration, invitations, tickets, and attendee flow
     </h3>
 
@@ -350,7 +350,7 @@ export default function CardsAndTicketsPage() {
           className="flex items-center gap-3 rounded-2xl bg-[var(--color-elive-light)] px-5 py-4 transition-all duration-200 hover:bg-slate-100"
         >
           <CheckCircle2 className="h-5 w-5 shrink-0 text-[var(--color-elive-accent)]" />
-          <p className="text-sm leading-7 text-[#143066] md:text-[15px]">
+          <p className="text-sm leading-7 text-[#161943] md:text-[15px]">
             {item}
           </p>
         </div>
@@ -385,13 +385,13 @@ export default function CardsAndTicketsPage() {
                   key={item.title}
                   variants={scaleIn}
                   whileHover={{ y: -8 }}
-                  className="group rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_24px_50px_rgba(15,35,76,0.14)]"
+                  className="group rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_12px_28px_rgba(22,25,67,0.06)] transition-all duration-300 hover:shadow-[0_24px_50px_rgba(22,25,67,0.14)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/10 p-3 text-[#143066] transition-all duration-300 group-hover:bg-[#143066] group-hover:text-white">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/10 p-3 text-[#161943] transition-all duration-300 group-hover:bg-[#161943] group-hover:text-white">
                     <Icon size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-xl font-black text-[#143066]">
+                  <h3 className="mt-5 text-xl font-black text-[#161943]">
                     {item.title}
                   </h3>
 
@@ -425,7 +425,7 @@ export default function CardsAndTicketsPage() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
-      className="mt-12 overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,35,76,0.08)]"
+      className="mt-12 overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(22,25,67,0.08)]"
     >
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm">
@@ -433,13 +433,13 @@ export default function CardsAndTicketsPage() {
           {/* HEADER */}
           <thead>
             <tr className="text-white">
-              <th className="bg-[#143066] px-6 py-4 text-left font-semibold">
+              <th className="bg-[#161943] px-6 py-4 text-left font-semibold">
                 Features
               </th>
               <th className="bg-green-500 px-6 py-4 text-center font-semibold">
                 Green Pack <br /> (1,000 TZS)
               </th>
-              <th className="bg-[#25468c] px-6 py-4 text-center font-semibold">
+              <th className="bg-[#007AB2] px-6 py-4 text-center font-semibold">
                 Blue Pack <br /> (1,500 TZS)
               </th>
               <th className="bg-[var(--color-elive-accent)] px-6 py-4 text-center font-semibold">
@@ -549,12 +549,12 @@ export default function CardsAndTicketsPage() {
                 <motion.div
                   key={item.title}
                   variants={scaleIn}
-                  className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_10px_24px_rgba(15,35,76,0.05)]"
+                  className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_10px_24px_rgba(22,25,67,0.05)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/8 p-3 text-[#161943]">
                     <Icon size={20} />
                   </div>
-                  <h3 className="mt-4 text-lg font-black text-[#143066]">
+                  <h3 className="mt-4 text-lg font-black text-[#161943]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-7 text-slate-600">
@@ -585,7 +585,7 @@ export default function CardsAndTicketsPage() {
                 key={item.title}
                 variants={scaleIn}
                 whileHover={{ y: -6 }}
-                className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
+                className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(22,25,67,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(22,25,67,0.10)]"
               >
                 <div className="relative h-56 w-full overflow-hidden">
                   <Image
@@ -596,11 +596,11 @@ export default function CardsAndTicketsPage() {
                     loading={index === 0 ? "eager" : "lazy"}
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b1735]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#161943]/70 via-transparent to-transparent" />
                 </div>
 
                 <div className="p-5">
-                  <h3 className="text-lg font-black text-[#143066] md:text-xl">
+                  <h3 className="text-lg font-black text-[#161943] md:text-xl">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-7 text-slate-600 md:text-base">
