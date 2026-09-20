@@ -68,7 +68,7 @@ export default function Header() {
         <div className="hidden lg:flex">
           <Link
             href="/contact"
-            className="rounded-full bg-[#FF9800] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#E88700]"
+            className="elive-btn elive-btn-primary"
           >
             <span className="text-white">Request a Quote</span>
           </Link>
@@ -112,7 +112,7 @@ export default function Header() {
          <Link
   href="/contact"
   onClick={() => setOpen(false)}
-  className="mt-4 rounded-full bg-[#FF9800] px-5 py-3 text-center text-sm font-semibold !text-white transition hover:bg-[#E88700]"
+  className="mt-4 elive-btn elive-btn-primary w-full"
 >
   <span className="text-white">Request a Quote</span>
 </Link>
