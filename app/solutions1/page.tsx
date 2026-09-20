@@ -218,14 +218,14 @@ export default function SolutionsPage() {
             >
               <motion.p
                 variants={fadeUp}
-                className="text-sm font-medium uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
+                className="text-4xl font-extrabold uppercase tracking-[0.22em] text-[var(--color-elive-accent)] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:leading-[1.03] lg:tracking-[-0.035em]"
               >
                 Our Solutions
               </motion.p>
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-4 text-4xl font-medium leading-[1.05] md:text-5xl lg:text-[64px]"
+                className="mt-4 text-4xl font-extrabold leading-[1.05] md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
               >
                 <span className="block text-white">Digital Solutions That Simplify Work</span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
