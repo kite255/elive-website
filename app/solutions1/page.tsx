@@ -195,7 +195,7 @@ export default function SolutionsPage() {
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
       <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
+        <div className="relative mx-auto min-h-[520px] max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)] md:min-h-[600px]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -209,7 +209,7 @@ export default function SolutionsPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(243,154,31,0.08),transparent_26%)]" />
           </div>
 
-          <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+          <div className="relative flex min-h-[520px] items-center px-6 py-14 md:min-h-[600px] md:px-10 lg:px-14">
             <motion.div
               className="max-w-3xl"
               initial="hidden"
@@ -218,14 +218,14 @@ export default function SolutionsPage() {
             >
               <motion.p
                 variants={fadeUp}
-                className="text-4xl font-extrabold uppercase tracking-[0.22em] text-[var(--color-elive-accent)] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:leading-[1.03] lg:tracking-[-0.035em]"
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
               >
                 Our Solutions
               </motion.p>
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-4 text-4xl font-normal leading-[1.05] md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
+                className="mt-4 text-4xl font-normal leading-[1.05] md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
               >
                 <span className="block text-white">Digital Solutions That Simplify Work</span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
