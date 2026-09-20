@@ -171,7 +171,7 @@ function SectionIntro({
 
       <h2
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
-          light ? "text-white" : "text-[#143066]"
+          light ? "text-white" : "text-[#161943]"
         }`}
       >
         {title}
@@ -241,7 +241,7 @@ export default function CreativeDesignPage() {
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
       <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#143066] shadow-[0_18px_45px_rgba(15,35,76,0.12)]">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#161943] shadow-[0_18px_45px_rgba(15,35,76,0.12)]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -251,7 +251,7 @@ export default function CreativeDesignPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0b1f49]/92 via-[#143066]/82 to-[#143066]/68" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/92 via-[#161943]/82 to-[#161943]/68" />
           </div>
 
           <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
@@ -328,7 +328,7 @@ export default function CreativeDesignPage() {
 
           <Reveal>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_45px_rgba(15,35,76,0.08)] md:p-10">
-              <h3 className="text-2xl font-black leading-tight text-[#143066] md:text-3xl">
+              <h3 className="text-2xl font-black leading-tight text-[#161943] md:text-3xl">
                 Design that looks strong and works strategically
               </h3>
               <p className="mt-5 text-base leading-8 text-slate-600">
@@ -382,11 +382,11 @@ export default function CreativeDesignPage() {
                   whileHover={{ y: -6 }}
                   className="group rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_12px_30px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_18px_36px_rgba(15,35,76,0.1)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/10 p-3 text-[#143066] transition-all duration-300 group-hover:bg-[#143066] group-hover:text-white">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/10 p-3 text-[#161943] transition-all duration-300 group-hover:bg-[#161943] group-hover:text-white">
                     <Icon size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-xl font-black text-[#143066]">
+                  <h3 className="mt-5 text-xl font-black text-[#161943]">
                     {item.title}
                   </h3>
 
@@ -423,10 +423,10 @@ export default function CreativeDesignPage() {
                   variants={scaleIn}
                   className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_12px_28px_rgba(15,35,76,0.05)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/10 p-3 text-[#143066]">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/10 p-3 text-[#161943]">
                     <Icon size={20} />
                   </div>
-                  <h3 className="mt-4 text-lg font-black text-[#143066]">
+                  <h3 className="mt-4 text-lg font-black text-[#161943]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-7 text-slate-600">
@@ -494,10 +494,10 @@ export default function CreativeDesignPage() {
                 variants={scaleIn}
                 className="rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-[0_12px_28px_rgba(15,35,76,0.06)]"
               >
-                <div className="inline-flex rounded-full bg-[#143066] px-4 py-2 text-sm font-black tracking-[0.18em] text-white">
+                <div className="inline-flex rounded-full bg-[#161943] px-4 py-2 text-sm font-black tracking-[0.18em] text-white">
                   {item.step}
                 </div>
-                <h3 className="mt-5 text-xl font-black text-[#143066]">
+                <h3 className="mt-5 text-xl font-black text-[#161943]">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-[15px] leading-7 text-slate-600">
