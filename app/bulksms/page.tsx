@@ -235,14 +235,14 @@ export default function BulkSmsPage() {
       >
         <motion.p
           variants={fadeUp}
-          className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
+          className="text-sm font-medium uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
         >
           eLive SMS
         </motion.p>
 
         <motion.h1
           variants={fadeUp}
-          className="mt-5 text-4xl font-extrabold leading-tight md:text-5xl lg:text-[58px] lg:leading-[1.06]"
+          className="mt-5 text-4xl font-medium leading-tight md:text-5xl lg:text-[58px] lg:leading-[1.06]"
         >
           <span className="block text-white">
             Flexible Bulk SMS
