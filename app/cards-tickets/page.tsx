@@ -278,7 +278,7 @@ export default function CardsAndTicketsPage() {
                   Registration, Cards & Tickets
                 </span>
                 <span className="block text-[var(--color-elive-accent)]">
-                  One Complete Event Experience
+                  One Connected Event Experience
                 </span>
               </motion.h1>
 
@@ -286,7 +286,7 @@ export default function CardsAndTicketsPage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
               >
-                Manage event registration, digital invitation cards, ticket sales, attendee communication, QR check-in, and reporting through eLive.
+                Manage registration, digital invitations, ticket sales, attendee communication, QR check-in, and reporting through one connected eLive event experience.
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
