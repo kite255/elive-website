@@ -273,8 +273,8 @@ export default function HomePage() {
   return (
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
-      <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto min-h-[520px] max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)] md:min-h-[600px]">
+      <section className="w-full">
+        <div className="relative min-h-[520px] w-full overflow-hidden bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)] md:min-h-[600px]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -287,7 +287,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#161943]/88 to-[#161943]/72" />
           </div>
 
-          <div className="relative flex min-h-[520px] items-center px-6 py-14 md:min-h-[600px] md:px-10 lg:px-14">
+          <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-5 py-10 md:min-h-[600px] md:px-8 lg:px-10">
             <motion.div
               className="max-w-3xl"
               initial="hidden"
@@ -316,7 +316,7 @@ export default function HomePage() {
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
                 >
                   <span className="text-white">Get Started</span>
                   <ArrowRight size={18} className="text-white" />
@@ -324,7 +324,7 @@ export default function HomePage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-8 py-4 text-base font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/60 bg-transparent px-8 py-4 text-base font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
                 >
                   Explore Services
                 </Link>
