@@ -316,7 +316,7 @@ export default function HomePage() {
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+                  className="inline-flex min-h-[52px] items-center gap-2 rounded-xl bg-[var(--color-elive-accent)] px-7 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
                 >
                   <span className="text-white">Get Started</span>
                   <ArrowRight size={18} className="text-white" />
@@ -324,7 +324,7 @@ export default function HomePage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/60 bg-transparent px-8 py-4 text-base font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+                  className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/60 bg-transparent px-7 py-3 text-sm font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
                 >
                   Explore Services
                 </Link>
