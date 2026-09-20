@@ -246,7 +246,7 @@ export default function SolutionsPage() {
               >
                 <Link
                   href="/contact"
-                  className="inline-flex min-h-[52px] items-center gap-2 rounded-xl bg-[var(--color-elive-accent)] px-7 py-3 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(243,154,31,0.26)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+                  className="elive-btn elive-btn-primary"
                 >
                   Get Started
                   <ArrowRight size={18} />
@@ -254,7 +254,7 @@ export default function SolutionsPage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex min-h-[52px] items-center justify-center rounded-xl border border-white/60 bg-transparent px-7 py-3 text-sm font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+                  className="elive-btn elive-btn-secondary"
                 >
                   View Services
                 </Link>
