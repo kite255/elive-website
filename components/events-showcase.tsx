@@ -131,7 +131,7 @@ export default function EventsShowcase() {
           <p className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-elive-accent)]">
             Explore Events
           </p>
-          <h2 className="mt-3 text-3xl font-black leading-tight text-[#143066] md:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-black leading-tight text-[#161943] md:text-4xl lg:text-5xl">
             Current and Upcoming Events
           </h2>
           <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-[var(--color-elive-accent)]" />
@@ -148,8 +148,8 @@ export default function EventsShowcase() {
               onClick={() => setFilter(item.value)}
               className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${
                 filter === item.value
-                  ? "bg-[#143066] text-white"
-                  : "border border-slate-200 bg-white text-slate-600 hover:border-[#143066]/30 hover:text-[#143066]"
+                  ? "bg-[#161943] text-white"
+                  : "border border-slate-200 bg-white text-slate-600 hover:border-[#161943]/30 hover:text-[#161943]"
               }`}
             >
               {item.label}
@@ -183,15 +183,15 @@ export default function EventsShowcase() {
                   className="overflow-hidden rounded-[1.7rem] border border-slate-200 bg-white shadow-[0_14px_35px_rgba(15,35,76,0.07)]"
                 >
                   <div
-                    className="relative h-52 bg-gradient-to-br from-[#143066] to-[#25468c] bg-cover bg-center"
+                    className="relative h-52 bg-gradient-to-br from-[#161943] via-[#161943] to-[#007AB2] bg-cover bg-center"
                     style={
                       event.image_url
                         ? { backgroundImage: `url("${event.image_url}")` }
                         : undefined
                     }
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#07183D]/80 via-transparent to-transparent" />
-                    <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold text-[#143066] shadow-sm">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#161943]/85 via-[#161943]/20 to-transparent" />
+                    <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold text-[#161943] shadow-sm">
                       {eventLabel(event)}
                     </span>
                     {event.status === "live" ? (
@@ -205,17 +205,17 @@ export default function EventsShowcase() {
                     <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
                       {event.event_type || eventLabel(event)}
                     </p>
-                    <h3 className="mt-2 text-xl font-black leading-snug text-[#143066]">
+                    <h3 className="mt-2 text-xl font-black leading-snug text-[#161943]">
                       {event.name}
                     </h3>
 
                     <div className="mt-5 space-y-3 text-sm text-slate-600">
                       <div className="flex items-start gap-3">
-                        <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-[#143066]" />
+                        <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-[#161943]" />
                         <span>{formatDate(event.starts_at)}</span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#143066]" />
+                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#161943]" />
                         <span>
                           {event.venue ||
                             event.venue_address ||
@@ -250,7 +250,7 @@ export default function EventsShowcase() {
                         href={event.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-sm font-semibold text-[#143066] hover:text-[var(--color-elive-accent)]"
+                        className="text-sm font-semibold text-[#161943] hover:text-[var(--color-elive-accent)]"
                       >
                         Details
                       </a>
@@ -262,7 +262,7 @@ export default function EventsShowcase() {
           </div>
         ) : (
           <div className="mt-12 rounded-[1.7rem] border border-dashed border-slate-300 bg-slate-50 px-6 py-14 text-center">
-            <p className="font-semibold text-[#143066]">
+            <p className="font-semibold text-[#161943]">
               No events are available in this category right now.
             </p>
           </div>
