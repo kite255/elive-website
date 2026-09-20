@@ -171,7 +171,7 @@ function SectionIntro({
 
       <h2
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
-          light ? "text-white" : "text-[#143066]"
+          light ? "text-white" : "text-[#161943]"
         }`}
       >
         {title}
@@ -240,8 +240,8 @@ export default function CreativeDesignPage() {
   return (
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
-      <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#143066] shadow-[0_18px_45px_rgba(15,35,76,0.12)]">
+      <section className="w-full">
+        <div className="relative min-h-[520px] w-full overflow-hidden bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)] md:min-h-[600px]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -251,10 +251,10 @@ export default function CreativeDesignPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0b1f49]/92 via-[#143066]/82 to-[#143066]/68" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#161943]/88 to-[#161943]/72" />
           </div>
 
-          <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+          <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-5 py-10 md:min-h-[600px] md:px-8 lg:px-10">
             <motion.div
               variants={staggerContainer}
               initial="hidden"
@@ -263,19 +263,19 @@ export default function CreativeDesignPage() {
             >
               <motion.p
                 variants={fadeUp}
-                className="text-sm font-bold uppercase tracking-[0.24em] text-[var(--color-elive-accent)]"
+                className="text-sm font-medium uppercase tracking-[0.24em] text-[var(--color-elive-accent)]"
               >
                 Creative Design
               </motion.p>
 <motion.h1
   variants={fadeUp}
-  className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[60px] lg:leading-[1.08]"
+  className="mt-5 text-4xl font-normal leading-tight md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
 >
   <span className="block text-white">
-    Design Solutions That Strengthen Brands
+    Creative Design That Strengthens Your Brand
   </span>
   <span className="block text-[var(--color-elive-accent)]">
-    and Visual Communication
+    Across Print & Digital
   </span>
 </motion.h1>
 
@@ -283,10 +283,7 @@ export default function CreativeDesignPage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
               >
-                We create brand identities, marketing materials, website
-                visuals, motion graphics, and design systems that help
-                businesses, institutions, and events present themselves with
-                clarity, consistency, and impact.
+                Build a stronger visual presence with brand identity, marketing materials, digital design, motion graphics, and print-ready creative work.
               </motion.p>
 
               <motion.div
@@ -296,15 +293,15 @@ export default function CreativeDesignPage() {
 <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
   <Link
     href="/contact"
-    className="group inline-flex items-center justify-center rounded-full bg-[var(--color-elive-accent)] px-8 py-3.5 text-sm font-bold !text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+    className="group elive-btn elive-btn-primary"
   >
-    Request Cards & Tickets
+    Request Creative Design
     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
   </Link>
 
   <Link
-    href="#event-features"
-    className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/10 px-8 py-3.5 text-sm font-bold !text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/15"
+    href="#services"
+    className="elive-btn elive-btn-secondary"
   >
     View Features
   </Link>
@@ -312,6 +309,7 @@ export default function CreativeDesignPage() {
               </motion.div>
             </motion.div>
           </div>
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-[var(--color-elive-accent)]" />
         </div>
       </section>
 
@@ -328,7 +326,7 @@ export default function CreativeDesignPage() {
 
           <Reveal>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_45px_rgba(15,35,76,0.08)] md:p-10">
-              <h3 className="text-2xl font-black leading-tight text-[#143066] md:text-3xl">
+              <h3 className="text-2xl font-black leading-tight text-[#161943] md:text-3xl">
                 Design that looks strong and works strategically
               </h3>
               <p className="mt-5 text-base leading-8 text-slate-600">
@@ -382,11 +380,11 @@ export default function CreativeDesignPage() {
                   whileHover={{ y: -6 }}
                   className="group rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_12px_30px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_18px_36px_rgba(15,35,76,0.1)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/10 p-3 text-[#143066] transition-all duration-300 group-hover:bg-[#143066] group-hover:text-white">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/10 p-3 text-[#161943] transition-all duration-300 group-hover:bg-[#161943] group-hover:text-white">
                     <Icon size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-xl font-black text-[#143066]">
+                  <h3 className="mt-5 text-xl font-black text-[#161943]">
                     {item.title}
                   </h3>
 
@@ -423,10 +421,10 @@ export default function CreativeDesignPage() {
                   variants={scaleIn}
                   className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_12px_28px_rgba(15,35,76,0.05)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/10 p-3 text-[#143066]">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/10 p-3 text-[#161943]">
                     <Icon size={20} />
                   </div>
-                  <h3 className="mt-4 text-lg font-black text-[#143066]">
+                  <h3 className="mt-4 text-lg font-black text-[#161943]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-7 text-slate-600">
@@ -494,10 +492,10 @@ export default function CreativeDesignPage() {
                 variants={scaleIn}
                 className="rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-[0_12px_28px_rgba(15,35,76,0.06)]"
               >
-                <div className="inline-flex rounded-full bg-[#143066] px-4 py-2 text-sm font-black tracking-[0.18em] text-white">
+                <div className="inline-flex rounded-full bg-[#161943] px-4 py-2 text-sm font-black tracking-[0.18em] text-white">
                   {item.step}
                 </div>
-                <h3 className="mt-5 text-xl font-black text-[#143066]">
+                <h3 className="mt-5 text-xl font-black text-[#161943]">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-[15px] leading-7 text-slate-600">

@@ -40,7 +40,7 @@ export default function SiteHeader() {
         <div className="hidden md:block">
           <Link
             href="/contact"
-            className="rounded-lg bg-elive-accent px-5 py-2 text-sm font-semibold text-white hover:bg-elive-accent-dark transition"
+            className="elive-btn elive-btn-primary"
           >
             Get Started
           </Link>

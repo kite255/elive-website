@@ -123,7 +123,7 @@ function SectionIntro({
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
           light
             ? "!text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.30)]"
-            : "text-[#143066]"
+            : "text-[#161943]"
         } ${titleClassName}`}
       >
         {title}
@@ -194,8 +194,8 @@ export default function SolutionsPage() {
   return (
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
-      <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
+      <section className="w-full">
+        <div className="relative min-h-[520px] w-full overflow-hidden bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)] md:min-h-[600px]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -205,11 +205,11 @@ export default function SolutionsPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#161943]/88 to-[#161943]/72" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(243,154,31,0.08),transparent_26%)]" />
           </div>
 
-          <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+          <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-5 py-10 md:min-h-[600px] md:px-8 lg:px-10">
             <motion.div
               className="max-w-3xl"
               initial="hidden"
@@ -218,18 +218,18 @@ export default function SolutionsPage() {
             >
               <motion.p
                 variants={fadeUp}
-                className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
               >
                 Our Solutions
               </motion.p>
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-4 text-4xl font-black leading-[1.05] md:text-5xl lg:text-[64px]"
+                className="mt-4 text-4xl font-normal leading-[1.05] md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
               >
-                <span className="block text-white">Smart Digital Solutions</span>
+                <span className="block text-white">Digital Solutions That Simplify Work</span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
-                  for Communication and Events
+                  Communication, Events & Engagement
                 </span>
               </motion.h1>
 
@@ -237,10 +237,7 @@ export default function SolutionsPage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
               >
-                We design and deliver integrated digital tools that simplify
-                communication, enhance engagement, and support successful events
-                and business operations with greater efficiency and measurable
-                impact.
+                eLive builds practical digital tools for messaging, events, and customer engagement—helping organizations communicate, coordinate, and operate more efficiently.
               </motion.p>
 
               <motion.div
@@ -249,7 +246,7 @@ export default function SolutionsPage() {
               >
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white shadow-[0_14px_34px_rgba(243,154,31,0.26)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+                  className="elive-btn elive-btn-primary"
                 >
                   Get Started
                   <ArrowRight size={18} />
@@ -257,13 +254,14 @@ export default function SolutionsPage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-8 py-4 text-base font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+                  className="elive-btn elive-btn-secondary"
                 >
                   View Services
                 </Link>
               </motion.div>
             </motion.div>
           </div>
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-[var(--color-elive-accent)]" />
         </div>
       </section>
 
@@ -279,7 +277,7 @@ export default function SolutionsPage() {
           </Reveal>
 
           <Reveal>
-            <div className="rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] p-8 text-white shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
+            <div className="rounded-[2rem] bg-gradient-to-br from-[#161943] via-[#007AB2] to-[#007AB2] p-8 text-white shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
               <p className="text-base leading-8 text-white/95 md:text-[17px]">
                 At eLive, we go beyond traditional services by building
                 intelligent solutions that help organizations operate more
@@ -315,7 +313,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* SOLUTIONS GRID */}
-      <section className="bg-[#143066] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
+      <section className="bg-[#161943] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionIntro
@@ -367,7 +365,7 @@ export default function SolutionsPage() {
 
       {/* CTA */}
       <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] bg-gradient-to-r from-[#102A5C] via-[#143066] to-[#2957A4] px-6 py-12 text-white shadow-[0_24px_55px_rgba(20,48,102,0.22)] md:px-10 lg:px-14">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] bg-gradient-to-r from-[#007AB2] via-[#161943] to-[#007AB2] px-6 py-12 text-white shadow-[0_24px_55px_rgba(20,48,102,0.22)] md:px-10 lg:px-14">
           <motion.div
             className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center"
             variants={staggerContainer}

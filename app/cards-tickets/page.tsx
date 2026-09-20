@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import EventsShowcase from "@/components/events-showcase";
 import {
   ArrowRight,
   BadgeCheck,
@@ -172,7 +173,7 @@ function SectionIntro({
 
       <h2
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
-          light ? "!text-white" : "text-[#143066]"
+          light ? "!text-white" : "text-[#161943]"
         } ${titleClassName}`}
       >
         {title}
@@ -241,8 +242,8 @@ export default function CardsAndTicketsPage() {
   return (
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
-      <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
+      <section className="w-full">
+        <div className="relative min-h-[520px] w-full overflow-hidden bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(22,25,67,0.18)] md:min-h-[600px]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -252,10 +253,10 @@ export default function CardsAndTicketsPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#161943]/88 to-[#161943]/72" />
           </div>
 
-          <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+          <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-5 py-10 md:min-h-[600px] md:px-8 lg:px-10">
             <motion.div
               className="max-w-3xl"
               initial="hidden"
@@ -264,20 +265,20 @@ export default function CardsAndTicketsPage() {
             >
               <motion.p
                 variants={fadeUp}
-                className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
+                className="text-sm font-medium uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
               >
-                eLive Card
+                eLive Events
               </motion.p>
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
+                className="mt-5 text-4xl font-normal leading-tight md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
               >
                 <span className="block text-white">
-                  Smart Cards and Tickets
+                  Registration, Cards & Tickets
                 </span>
                 <span className="block text-[var(--color-elive-accent)]">
-                  for Invitations, RSVP, and QR Verification
+                  One Connected Event Experience
                 </span>
               </motion.h1>
 
@@ -285,36 +286,35 @@ export default function CardsAndTicketsPage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
               >
-                Manage invitations, guest responses, ticket delivery, and
-                attendee verification through a more structured and professional
-                digital event experience.
+                Manage registration, digital invitations, ticket sales, attendee communication, QR check-in, and reporting through one connected eLive event experience.
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
   <Link
     href="/contact"
-    className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-7 py-3 text-sm font-semibold !text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+    className="group elive-btn elive-btn-primary"
   >
-    Request Cards & Tickets
+    Start Your Event
     <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
   </Link>
 
   <Link
     href="/elive-cards-gallery"
-    className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white px-7 py-3 text-sm font-semibold text-[#143066] shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100"
+    className="elive-btn elive-btn-light"
   >
     View Digital Card Gallery
   </Link>
 
   <Link
     href="#event-features"
-    className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3 text-sm font-semibold !text-white backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/15"
+    className="elive-btn elive-btn-light"
   >
-    View Features
+    Explore Services
   </Link>
 </motion.div>
             </motion.div>
           </div>
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-[var(--color-elive-accent)]" />
         </div>
       </section>
 
@@ -323,37 +323,35 @@ export default function CardsAndTicketsPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr,1.05fr] lg:items-center">
           <Reveal>
             <SectionIntro
-              eyebrow="Cards & Tickets Overview"
-              title="A Structured Way to Manage Invitations and Attendee Access"
-              description="Our Cards and Tickets solution helps event organizers improve invitation delivery, RSVP handling, ticket distribution, and entry verification."
+              eyebrow="Event Management Overview"
+              title="From Registration and Invitations to Tickets and Check-in"
+              description="eLive supports the attendee journey from registration and invitations through ticketing, communication, QR entry, and post-event reporting."
             />
           </Reveal>
 
          <Reveal>
-  <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_45px_rgba(15,35,76,0.06)] md:p-10">
+  <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_45px_rgba(22,25,67,0.06)] md:p-10">
     
-    <h3 className="text-2xl font-black leading-tight text-[#143066] md:text-3xl">
-      Built for invitations, confirmations, tickets, and guest flow
+    <h3 className="text-2xl font-black leading-tight text-[#161943] md:text-3xl">
+      Built for registration, invitations, tickets, and attendee flow
     </h3>
 
     <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600 md:text-[17px]">
-      Whether you are managing a private celebration or a corporate
-      function, eLive Card helps you coordinate attendees with clarity,
-      speed, and a more structured event experience.
+      Whether you are managing a private celebration, conference, concert, church event, or corporate function, eLive helps you coordinate attendees with clarity, speed, and one connected event experience.
     </p>
 
     <div className="mt-8 grid gap-4">
       {[
-        "Professional digital invitations",
-        "Simple RSVP and attendance tracking",
-        "QR-based ticket and entry verification",
+        "Online registration and attendee management",
+        "Professional digital invitation cards and RSVP",
+        "Ticket sales, QR verification, and attendance reporting",
       ].map((item) => (
         <div
           key={item}
           className="flex items-center gap-3 rounded-2xl bg-[var(--color-elive-light)] px-5 py-4 transition-all duration-200 hover:bg-slate-100"
         >
           <CheckCircle2 className="h-5 w-5 shrink-0 text-[var(--color-elive-accent)]" />
-          <p className="text-sm leading-7 text-[#143066] md:text-[15px]">
+          <p className="text-sm leading-7 text-[#161943] md:text-[15px]">
             {item}
           </p>
         </div>
@@ -374,8 +372,8 @@ export default function CardsAndTicketsPage() {
           <Reveal>
             <SectionIntro
               eyebrow="Core Features"
-              title="What the Cards and Tickets Solution Supports"
-              description="Designed for better guest communication, event coordination, and attendee verification."
+              title="Everything You Need to Manage Your Event Audience"
+              description="Registration, cards, ticketing, communication, QR check-in, and reporting in one coordinated service."
               align="center"
             />
           </Reveal>
@@ -388,13 +386,13 @@ export default function CardsAndTicketsPage() {
                   key={item.title}
                   variants={scaleIn}
                   whileHover={{ y: -8 }}
-                  className="group rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_24px_50px_rgba(15,35,76,0.14)]"
+                  className="group rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_12px_28px_rgba(22,25,67,0.06)] transition-all duration-300 hover:shadow-[0_24px_50px_rgba(22,25,67,0.14)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/10 p-3 text-[#143066] transition-all duration-300 group-hover:bg-[#143066] group-hover:text-white">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/10 p-3 text-[#161943] transition-all duration-300 group-hover:bg-[#161943] group-hover:text-white">
                     <Icon size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-xl font-black text-[#143066]">
+                  <h3 className="mt-5 text-xl font-black text-[#161943]">
                     {item.title}
                   </h3>
 
@@ -408,7 +406,8 @@ export default function CardsAndTicketsPage() {
         </div>
       </section>
 
-     
+
+      <EventsShowcase />
 
       {/* SERVICE COVERAGE */}
 <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
@@ -427,7 +426,7 @@ export default function CardsAndTicketsPage() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
-      className="mt-12 overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,35,76,0.08)]"
+      className="mt-12 overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(22,25,67,0.08)]"
     >
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm">
@@ -435,13 +434,13 @@ export default function CardsAndTicketsPage() {
           {/* HEADER */}
           <thead>
             <tr className="text-white">
-              <th className="bg-[#143066] px-6 py-4 text-left font-semibold">
+              <th className="bg-[#161943] px-6 py-4 text-left font-semibold">
                 Features
               </th>
               <th className="bg-green-500 px-6 py-4 text-center font-semibold">
                 Green Pack <br /> (1,000 TZS)
               </th>
-              <th className="bg-[#25468c] px-6 py-4 text-center font-semibold">
+              <th className="bg-[#007AB2] px-6 py-4 text-center font-semibold">
                 Blue Pack <br /> (1,500 TZS)
               </th>
               <th className="bg-[var(--color-elive-accent)] px-6 py-4 text-center font-semibold">
@@ -537,7 +536,7 @@ export default function CardsAndTicketsPage() {
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionIntro
-              eyebrow="Why eLive Card"
+              eyebrow="Why eLive"
               title="A Better Experience for Organizers and Attendees"
               description="This solution improves how events are presented, managed, and verified."
               align="center"
@@ -551,12 +550,12 @@ export default function CardsAndTicketsPage() {
                 <motion.div
                   key={item.title}
                   variants={scaleIn}
-                  className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_10px_24px_rgba(15,35,76,0.05)]"
+                  className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_10px_24px_rgba(22,25,67,0.05)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/8 p-3 text-[#161943]">
                     <Icon size={20} />
                   </div>
-                  <h3 className="mt-4 text-lg font-black text-[#143066]">
+                  <h3 className="mt-4 text-lg font-black text-[#161943]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-7 text-slate-600">
@@ -575,7 +574,7 @@ export default function CardsAndTicketsPage() {
           <Reveal>
             <SectionIntro
               eyebrow="Use Cases"
-              title="Cards and Tickets for Different Event Types"
+              title="Registration, Cards and Tickets for Different Event Types"
               description="A flexible solution for both social and professional event environments."
               align="center"
             />
@@ -587,7 +586,7 @@ export default function CardsAndTicketsPage() {
                 key={item.title}
                 variants={scaleIn}
                 whileHover={{ y: -6 }}
-                className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
+                className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(22,25,67,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(22,25,67,0.10)]"
               >
                 <div className="relative h-56 w-full overflow-hidden">
                   <Image
@@ -598,11 +597,11 @@ export default function CardsAndTicketsPage() {
                     loading={index === 0 ? "eager" : "lazy"}
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b1735]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#161943]/70 via-transparent to-transparent" />
                 </div>
 
                 <div className="p-5">
-                  <h3 className="text-lg font-black text-[#143066] md:text-xl">
+                  <h3 className="text-lg font-black text-[#161943] md:text-xl">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-7 text-slate-600 md:text-base">

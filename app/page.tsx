@@ -204,7 +204,7 @@ function SectionIntro({
 
       <h2
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
-          light ? "!text-white" : "text-[#143066]"
+          light ? "!text-white" : "text-[#161943]"
         }`}
       >
         {title}
@@ -273,8 +273,8 @@ export default function HomePage() {
   return (
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
-      <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
+      <section className="w-full">
+        <div className="relative min-h-[520px] w-full overflow-hidden bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)] md:min-h-[600px]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -284,10 +284,10 @@ export default function HomePage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#161943]/88 to-[#161943]/72" />
           </div>
 
-          <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+          <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-5 py-10 md:min-h-[600px] md:px-8 lg:px-10">
             <motion.div
               className="max-w-3xl"
               initial="hidden"
@@ -296,13 +296,13 @@ export default function HomePage() {
             >
               <motion.h1
                 variants={fadeUp}
-                className="text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.02]"
+                className="text-4xl font-normal leading-tight md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
               >
                 <span className="block text-white">
-                  Helping Businesses and Events
+                  Smart Solutions for Communication & Events
                 </span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
-                  Connect, Impress & Engage
+                  Built to Help You Connect & Grow
                 </span>
               </motion.h1>
 
@@ -310,15 +310,13 @@ export default function HomePage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/85 md:text-lg"
               >
-                We deliver communication, event, branding, and media solutions
-                that help organizations operate professionally and engage their
-                audiences with confidence.
+                From messaging and event technology to branding and media, eLive helps organizations communicate clearly, manage experiences professionally, and engage audiences with confidence.
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-8 py-4 text-base font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
+                  className="elive-btn elive-btn-primary"
                 >
                   <span className="text-white">Get Started</span>
                   <ArrowRight size={18} className="text-white" />
@@ -326,7 +324,7 @@ export default function HomePage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-8 py-4 text-base font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+                  className="elive-btn elive-btn-secondary"
                 >
                   Explore Services
                 </Link>
@@ -348,11 +346,11 @@ export default function HomePage() {
                   whileHover={{ y: -6 }}
                   className="group rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_20px_42px_rgba(15,35,76,0.12)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066] transition-all duration-300 group-hover:bg-[#143066] group-hover:text-white">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/8 p-3 text-[#161943] transition-all duration-300 group-hover:bg-[#161943] group-hover:text-white">
                     <Icon size={20} />
                   </div>
 
-                  <h3 className="mt-4 text-lg font-bold leading-snug text-[#143066]">
+                  <h3 className="mt-4 text-lg font-bold leading-snug text-[#161943]">
                     {card.title}
                   </h3>
 
@@ -372,7 +370,7 @@ export default function HomePage() {
               Trusted by businesses, institutions, and event organizers
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-semibold text-[#143066] md:text-base">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-semibold text-[#161943] md:text-base">
               {trustedBy.map((item) => (
                 <span key={item} className="opacity-80">
                   {item}
@@ -395,7 +393,7 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal>
-            <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] p-7 shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
+            <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#161943] via-[#007AB2] to-[#007AB2] p-7 shadow-[0_24px_55px_rgba(20,48,102,0.16)] md:p-10 lg:p-12">
               <p className="text-base leading-8 text-white md:text-[17px]">
                 At eLive, we deliver communication and marketing solutions that
                 help businesses and events connect, impress, and engage their
@@ -453,7 +451,7 @@ export default function HomePage() {
                 whileHover={{ y: -6 }}
                 className="group rounded-[1.6rem] border border-slate-200 bg-white p-8 text-center shadow-[0_10px_25px_rgba(15,35,76,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,35,76,0.12)]"
               >
-                <div className="text-4xl font-black text-[#143066] md:text-5xl">
+                <div className="text-4xl font-black text-[#161943] md:text-5xl">
                   <AnimatedNumber value={item.value} suffix={item.suffix} />
                 </div>
 
@@ -496,11 +494,11 @@ export default function HomePage() {
                   whileHover={{ y: -6 }}
                   className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_18px_36px_rgba(15,35,76,0.1)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/8 p-3 text-[#161943]">
                     <Icon size={21} />
                   </div>
 
-                  <h3 className="mt-4 text-lg font-black text-[#143066]">
+                  <h3 className="mt-4 text-lg font-black text-[#161943]">
                     {item.title}
                   </h3>
 
@@ -534,7 +532,7 @@ export default function HomePage() {
                 whileHover={{ y: -5 }}
                 className="rounded-[1.7rem] border border-slate-200 bg-[var(--color-elive-light)] p-7 shadow-[0_12px_28px_rgba(15,35,76,0.05)] transition-all duration-300 hover:shadow-[0_18px_38px_rgba(15,35,76,0.10)]"
               >
-                <h3 className="text-xl font-black text-[#143066]">
+                <h3 className="text-xl font-black text-[#161943]">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
@@ -568,7 +566,7 @@ export default function HomePage() {
                 <span className="text-sm font-black text-[var(--color-elive-accent)]">
                   {item.step}
                 </span>
-                <h3 className="mt-3 text-lg font-black text-[#143066]">
+                <h3 className="mt-3 text-lg font-black text-[#161943]">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">
@@ -582,7 +580,7 @@ export default function HomePage() {
 
       {/* CTA */}
       <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#143066] via-[#214A92] to-[#2957A4] px-6 py-12 shadow-[0_28px_70px_rgba(20,48,102,0.18)] md:px-10 lg:px-12">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#161943] via-[#007AB2] to-[#007AB2] px-6 py-12 shadow-[0_28px_70px_rgba(20,48,102,0.18)] md:px-10 lg:px-12">
           <div className="grid gap-8 lg:grid-cols-[1fr,auto] lg:items-end">
             <Reveal>
               <SectionIntro
@@ -650,7 +648,7 @@ export default function HomePage() {
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--color-elive-accent)]">
                   Send an Inquiry
                 </p>
-                <h3 className="mt-2 text-2xl font-black text-[#143066]">
+                <h3 className="mt-2 text-2xl font-black text-[#161943]">
                   Tell us about your project
                 </h3>
               </div>
@@ -678,7 +676,7 @@ export default function HomePage() {
 
                 <button
                   type="button"
-                  className="inline-flex w-full items-center justify-center rounded-2xl bg-gradient-to-r from-[#143066] to-[#2957A4] px-5 py-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(20,48,102,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(20,48,102,0.35)]"
+                  className="inline-flex w-full items-center justify-center rounded-2xl bg-gradient-to-r from-[#161943] to-[#007AB2] px-5 py-4 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(20,48,102,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(20,48,102,0.35)]"
                 >
                   Send Inquiry
                 </button>
@@ -702,7 +700,7 @@ function ContactCard({
 }) {
   return (
     <div className="flex items-start gap-4 rounded-[1.6rem] border border-slate-200 bg-white px-5 py-5 shadow-[0_10px_26px_rgba(15,35,76,0.06)]">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#143066]/8 text-[#143066]">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#161943]/8 text-[#161943]">
         <Icon size={20} />
       </div>
 
@@ -710,7 +708,7 @@ function ContactCard({
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
           {label}
         </p>
-        <p className="mt-1 text-[15px] font-semibold leading-7 text-[#143066] md:text-base">
+        <p className="mt-1 text-[15px] font-semibold leading-7 text-[#161943] md:text-base">
           {value}
         </p>
       </div>

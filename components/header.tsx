@@ -9,7 +9,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { href: "/about", label: "About" },
   { href: "/bulksms", label: "Bulk SMS" },
-  { href: "/cards-tickets", label: "Cards & Tickets" },
+  { href: "/events", label: "Events" },
   { href: "/creative-design", label: "Creative Design" },
    { href: "/multimedia", label: "Multimedia" },
   { href: "/contact", label: "Contact" },
@@ -52,13 +52,13 @@ export default function Header() {
               href={link.href}
               className={`relative text-sm font-semibold transition ${
                 isActive(link.href)
-                  ? "text-[#F39A1F]"
-                  : "text-[#24324A] hover:text-[#F39A1F]"
+                  ? "text-[#FF9800]"
+                  : "text-[#161943] hover:text-[#FF9800]"
               }`}
             >
               {link.label}
               {isActive(link.href) && (
-                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-[#F39A1F]" />
+                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-[#FF9800]" />
               )}
             </Link>
           ))}
@@ -68,7 +68,7 @@ export default function Header() {
         <div className="hidden lg:flex">
           <Link
             href="/contact"
-            className="rounded-full bg-[#F39A1F] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#E68613]"
+            className="elive-btn elive-btn-primary"
           >
             <span className="text-white">Request a Quote</span>
           </Link>
@@ -80,7 +80,7 @@ export default function Header() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((prev) => !prev)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-[#24324A] shadow-sm transition hover:border-[#F39A1F] hover:text-[#F39A1F] lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-[#161943] shadow-sm transition hover:border-[#FF9800] hover:text-[#FF9800] lg:hidden"
         >
           {open ? <X size={22} strokeWidth={2.2} /> : <Menu size={22} strokeWidth={2.2} />}
         </button>
@@ -100,8 +100,8 @@ export default function Header() {
                   onClick={() => setOpen(false)}
                   className={`rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 ${
                     active
-                      ? "bg-[#F39A1F] text-white shadow-md"
-                      : "text-[#24324A] hover:bg-[#F7F8FA] hover:text-[#F39A1F]"
+                      ? "bg-[#FF9800] text-white shadow-md"
+                      : "text-[#161943] hover:bg-[#F7F8FA] hover:text-[#FF9800]"
                   }`}
                 >
                   {link.label}
@@ -112,7 +112,7 @@ export default function Header() {
          <Link
   href="/contact"
   onClick={() => setOpen(false)}
-  className="mt-4 rounded-full bg-[#F39A1F] px-5 py-3 text-center text-sm font-semibold !text-white transition hover:bg-[#E68613]"
+  className="mt-4 elive-btn elive-btn-primary w-full"
 >
   <span className="text-white">Request a Quote</span>
 </Link>

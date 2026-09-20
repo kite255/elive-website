@@ -143,7 +143,7 @@ function SectionIntro({
 
       <h2
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
-          light ? "text-white" : "text-[#143066]"
+          light ? "text-white" : "text-[#161943]"
         }`}
       >
         {title}
@@ -212,8 +212,8 @@ export default function BulkSmsPage() {
   return (
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
   
-     {/* HERO */}<section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-  <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
+     {/* HERO */}<section className="w-full">
+  <div className="relative min-h-[520px] w-full overflow-hidden bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)] md:min-h-[600px]">
     <div className="absolute inset-0">
       <Image
         src="/hero.jpg"
@@ -223,10 +223,10 @@ export default function BulkSmsPage() {
         sizes="100vw"
         className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#161943]/88 to-[#161943]/72" />
     </div>
 
-    <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+    <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-5 py-10 md:min-h-[600px] md:px-8 lg:px-10">
       <motion.div
         className="max-w-3xl"
         initial="hidden"
@@ -235,20 +235,20 @@ export default function BulkSmsPage() {
       >
         <motion.p
           variants={fadeUp}
-          className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
+          className="text-sm font-medium uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
         >
           eLive SMS
         </motion.p>
 
         <motion.h1
           variants={fadeUp}
-          className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
+          className="mt-5 text-4xl font-normal leading-tight md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
         >
           <span className="block text-white">
             Flexible Bulk SMS
           </span>
-          <span className="block text-[var(--color-elive-accent)]">
-            for Promotions, Alerts, Reminders, and Customer Updates
+          <span className="block max-w-[760px] text-[var(--color-elive-accent)]">
+            Business Communication at Scale
           </span>
         </motion.h1>
 
@@ -256,9 +256,7 @@ export default function BulkSmsPage() {
           variants={fadeUp}
           className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
         >
-          Reach your audience quickly through a professional bulk messaging
-          solution built for business communication, campaign delivery,
-          alerts, reminders, and customer engagement.
+          Send promotions, alerts, reminders, and customer updates through a professional bulk messaging solution built for fast, reliable communication.
         </motion.p>
 
         <motion.div
@@ -267,7 +265,7 @@ export default function BulkSmsPage() {
         >
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-base font-semibold text-white shadow-sm transition-all duration-200 hover:bg-[var(--color-elive-accent-dark)]"
+            className="group elive-btn elive-btn-primary"
           >
             <span className="text-white">Request Bulk SMS</span>
             <ArrowRight
@@ -278,7 +276,7 @@ export default function BulkSmsPage() {
 
           <Link
             href="#sms-pricing"
-            className="inline-flex items-center justify-center rounded-full border border-white/50 bg-white/8 px-7 py-3.5 text-base font-semibold !text-white backdrop-blur-sm transition-all duration-200 hover:border-white hover:bg-white/14"
+            className="elive-btn elive-btn-secondary"
           >
             View Pricing
           </Link>
@@ -287,7 +285,7 @@ export default function BulkSmsPage() {
   href="https://message.elive.co.tz/auth/login"
   target="_blank"
   rel="noopener noreferrer"
-  className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3.5 text-base font-semibold !text-white transition-all duration-200 hover:border-white hover:bg-white/10"
+  className="elive-btn elive-btn-secondary"
 >
   Login eLive SMS
 </Link>
@@ -310,7 +308,7 @@ export default function BulkSmsPage() {
 <Reveal>
   <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_45px_rgba(15,35,76,0.06)] md:p-10">
     
-    <h3 className="text-2xl font-black leading-tight text-[#143066] md:text-3xl">
+    <h3 className="text-2xl font-black leading-tight text-[#161943] md:text-3xl">
       Built for campaigns, reminders, alerts, and customer communication
     </h3>
 
@@ -331,7 +329,7 @@ export default function BulkSmsPage() {
           className="flex items-center gap-3 rounded-2xl bg-[var(--color-elive-light)] px-5 py-4 transition-all duration-200 hover:bg-slate-100"
         >
           <CheckCircle2 className="h-5 w-5 shrink-0 text-[var(--color-elive-accent)]" />
-          <p className="text-sm leading-7 text-[#143066] md:text-[15px]">
+          <p className="text-sm leading-7 text-[#161943] md:text-[15px]">
             {item}
           </p>
         </div>
@@ -399,11 +397,11 @@ export default function BulkSmsPage() {
                   whileHover={{ y: -8 }}
                   className="group rounded-[1.7rem] border border-slate-200 bg-white p-7 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition-all duration-300 hover:shadow-[0_24px_50px_rgba(15,35,76,0.14)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/10 p-3 text-[#143066] transition-all duration-300 group-hover:bg-[#143066] group-hover:text-white">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/10 p-3 text-[#161943] transition-all duration-300 group-hover:bg-[#161943] group-hover:text-white">
                     <Icon size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-xl font-black text-[#143066]">
+                  <h3 className="mt-5 text-xl font-black text-[#161943]">
                     {item.title}
                   </h3>
 
@@ -467,10 +465,10 @@ export default function BulkSmsPage() {
                   variants={scaleIn}
                   className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_10px_24px_rgba(15,35,76,0.05)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/8 p-3 text-[#161943]">
                     <Icon size={20} />
                   </div>
-                  <h3 className="mt-4 text-lg font-black text-[#143066]">
+                  <h3 className="mt-4 text-lg font-black text-[#161943]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-7 text-slate-600">
@@ -495,7 +493,7 @@ export default function BulkSmsPage() {
           Flexible Pricing
         </p>
 
-        <h2 className="mt-3 text-3xl font-black tracking-tight text-[#143066] md:text-4xl">
+        <h2 className="mt-3 text-3xl font-black tracking-tight text-[#161943] md:text-4xl">
           Bulk SMS Pricing
         </h2>
 
@@ -512,7 +510,7 @@ export default function BulkSmsPage() {
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-[var(--color-elive-accent)]">
               Starter Pack
             </p>
-            <h3 className="mt-2 text-2xl font-black text-[#143066] md:text-3xl">
+            <h3 className="mt-2 text-2xl font-black text-[#161943] md:text-3xl">
               TZS 35,000/=
             </h3>
           </div>
@@ -551,7 +549,7 @@ export default function BulkSmsPage() {
       {/* TABLE CARD */}
       <div className="mt-10 overflow-hidden rounded-[1.6rem] border border-[var(--color-elive-border)] bg-white">
         {/* HEADER BAR */}
-        <div className="bg-[#2F4D8C] px-6 py-5 text-center md:px-8">
+        <div className="bg-[#007AB2] px-6 py-5 text-center md:px-8">
           <h3 className="text-xl font-bold tracking-tight !text-white md:text-2xl">
             Message Volume Pricing
           </h3>
@@ -562,13 +560,13 @@ export default function BulkSmsPage() {
           <table className="w-full border-collapse">
             <thead>
               <tr className="bg-[#F7F8FA] text-left">
-                <th className="px-6 py-4 text-sm font-bold text-[#143066]">
+                <th className="px-6 py-4 text-sm font-bold text-[#161943]">
                   Minimum SMS
                 </th>
-                <th className="px-6 py-4 text-sm font-bold text-[#143066]">
+                <th className="px-6 py-4 text-sm font-bold text-[#161943]">
                   Maximum SMS
                 </th>
-                <th className="px-6 py-4 text-right text-sm font-bold text-[#143066]">
+                <th className="px-6 py-4 text-right text-sm font-bold text-[#161943]">
                   Price per SMS
                 </th>
               </tr>

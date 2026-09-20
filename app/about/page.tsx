@@ -159,7 +159,7 @@ function SectionIntro({
         className={`mt-3 text-3xl font-black leading-tight md:text-4xl lg:text-5xl ${
           light
             ? "!text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.30)]"
-            : "text-[#143066]"
+            : "text-[#161943]"
         } ${titleClassName}`}
       >
         {title}
@@ -230,8 +230,8 @@ export default function AboutPage() {
   return (
     <main className="bg-[var(--color-elive-light)] text-[var(--color-elive-text)]">
       {/* HERO */}
-      <section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
+      <section className="w-full">
+        <div className="relative min-h-[520px] w-full overflow-hidden bg-[var(--color-elive-primary)] md:min-h-[600px]">
           <div className="absolute inset-0">
             <Image
               src="/hero.jpg"
@@ -241,47 +241,38 @@ export default function AboutPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#07183D]/95 via-[#102B5A]/88 to-[#143066]/72" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#161943]/88 to-[#161943]/72" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(243,154,31,0.08),transparent_26%)]" />
           </div>
 
-          <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
+          <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-5 py-10 md:min-h-[600px] md:px-8 lg:px-10">
             <motion.div
               className="max-w-3xl"
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
             >
-              <motion.div variants={fadeUp}>
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-elive-accent)] md:text-[15px]">
-                  About eLive
-                </p>
-              </motion.div>
-
               <motion.h1
                 variants={fadeUp}
-                className="mt-4 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.02]"
+                className="mt-7 max-w-[720px] text-[2.2rem] font-extrabold leading-[1.06] tracking-[-0.025em] md:text-[2.75rem] lg:text-[52px]"
               >
-                <span className="block text-white">Built to Help Brands</span>
-                <span className="mt-2 block text-[var(--color-elive-accent)]">
-                  Communicate, Organize & Stand Out
+                <span className="block text-white">Technology, Communication & Creative Solutions</span>
+                <span className="mt-2 block text-[0.92em] text-[var(--color-elive-accent)]">
+                  Built Around Your Business
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={fadeUp}
-                className="mt-6 max-w-2xl text-base leading-8 text-white/85 md:text-lg"
+                className="mt-8 max-w-[650px] text-base leading-8 text-white/90 md:text-lg"
               >
-                eLive is a communication and marketing solutions company focused
-                on helping businesses and events engage their audiences through
-                smart messaging, structured event support, strong branding, and
-                professional media execution.
+                eLive helps businesses, institutions, and event organizers communicate better through messaging, event technology, branding, creative design, and professional media support.
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[var(--color-elive-accent-dark)]"
+                  className="elive-btn elive-btn-primary"
                 >
                   <span className="text-white">Work With Us</span>
                   <ArrowRight size={18} className="text-white" />
@@ -289,13 +280,15 @@ export default function AboutPage() {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-full border border-white/60 bg-transparent px-7 py-3.5 text-sm font-semibold !text-white transition duration-300 hover:border-white hover:bg-white/12"
+                  className="elive-btn elive-btn-secondary"
                 >
                   Explore Services
                 </Link>
               </motion.div>
             </motion.div>
           </div>
+
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-[var(--color-elive-accent)]" />
         </div>
       </section>
 
@@ -317,10 +310,10 @@ export default function AboutPage() {
               whileHover={{ y: -5 }}
               className="rounded-[1.8rem] border border-slate-200 bg-[var(--color-elive-light)] p-7 shadow-[0_12px_28px_rgba(15,35,76,0.05)] md:p-8"
             >
-              <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
+              <div className="inline-flex rounded-2xl bg-[#161943]/8 p-3 text-[#161943]">
                 <Target size={22} />
               </div>
-              <h3 className="mt-5 text-2xl font-black text-[#143066]">
+              <h3 className="mt-5 text-2xl font-black text-[#161943]">
                 Our Mission
               </h3>
               <p className="mt-4 text-[15px] leading-8 text-slate-600 md:text-base">
@@ -335,10 +328,10 @@ export default function AboutPage() {
               whileHover={{ y: -5 }}
               className="rounded-[1.8rem] border border-slate-200 bg-[var(--color-elive-light)] p-7 shadow-[0_12px_28px_rgba(15,35,76,0.05)] md:p-8"
             >
-              <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
+              <div className="inline-flex rounded-2xl bg-[#161943]/8 p-3 text-[#161943]">
                 <Eye size={22} />
               </div>
-              <h3 className="mt-5 text-2xl font-black text-[#143066]">
+              <h3 className="mt-5 text-2xl font-black text-[#161943]">
                 Our Vision
               </h3>
               <p className="mt-4 text-[15px] leading-8 text-slate-600 md:text-base">
@@ -374,11 +367,11 @@ export default function AboutPage() {
                   whileHover={{ y: -6 }}
                   className="rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
                 >
-                  <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
+                  <div className="inline-flex rounded-2xl bg-[#161943]/8 p-3 text-[#161943]">
                     <Icon size={22} />
                   </div>
 
-                  <h3 className="mt-4 text-lg font-black text-[#143066] md:text-xl">
+                  <h3 className="mt-4 text-lg font-black text-[#161943] md:text-xl">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-7 text-slate-600 md:text-base">
@@ -408,7 +401,7 @@ export default function AboutPage() {
                 key={item}
                 variants={scaleIn}
                 whileHover={{ y: -4 }}
-                className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-[var(--color-elive-light)] px-5 py-4 text-[15px] font-medium text-[#143066] shadow-[0_10px_24px_rgba(15,35,76,0.05)] transition-all duration-300 hover:shadow-[0_16px_30px_rgba(15,35,76,0.1)] md:text-base"
+                className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-[var(--color-elive-light)] px-5 py-4 text-[15px] font-medium text-[#161943] shadow-[0_10px_24px_rgba(15,35,76,0.05)] transition-all duration-300 hover:shadow-[0_16px_30px_rgba(15,35,76,0.1)] md:text-base"
               >
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-elive-accent)]" />
                 <span>{item}</span>
@@ -419,7 +412,7 @@ export default function AboutPage() {
       </section>
 
       {/* MILESTONES */}
-      <section className="relative overflow-hidden bg-[#143066] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden bg-[#161943] px-4 py-16 md:px-6 lg:px-8 lg:py-24">
         <div className="absolute inset-0">
           <div className="absolute -top-10 left-0 h-72 w-72 rounded-full bg-[var(--color-elive-accent)]/10 blur-3xl" />
           <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
@@ -477,11 +470,11 @@ export default function AboutPage() {
                 whileHover={{ y: -5 }}
                 className="rounded-[1.6rem] border border-slate-200 bg-[var(--color-elive-light)] p-6 shadow-[0_12px_28px_rgba(15,35,76,0.06)] transition duration-300 hover:shadow-[0_18px_34px_rgba(15,35,76,0.1)]"
               >
-                <div className="inline-flex rounded-2xl bg-[#143066]/8 p-3 text-[#143066]">
+                <div className="inline-flex rounded-2xl bg-[#161943]/8 p-3 text-[#161943]">
                   <Building2 size={22} />
                 </div>
 
-                <h3 className="mt-4 text-lg font-black text-[#143066] md:text-xl">
+                <h3 className="mt-4 text-lg font-black text-[#161943] md:text-xl">
                   {item.title}
                 </h3>
 
