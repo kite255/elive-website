@@ -4,22 +4,22 @@
    THEME (BRAND COLORS)
 ========================= */
 @theme {
-  --color-elive-primary: #25468c;
-  --color-elive-primary-dark: #1e3770;
-  --color-elive-primary-soft: #3a5aa3;
+  --color-elive-primary: #161943;
+  --color-elive-primary-dark: #0f1233;
+  --color-elive-primary-soft: #007ab2;
 
-  --color-elive-accent: #f39a1f;
-  --color-elive-accent-dark: #e68613;
+  --color-elive-accent: #ff9800;
+  --color-elive-accent-dark: #e88700;
 
   --color-elive-light: #f7f8fa;
-  --color-elive-text: #24324a;
+  --color-elive-text: #161943;
   --color-elive-white: #ffffff;
 
   --color-elive-border: #dbe2ea;
   --color-elive-muted: #5f6f86;
   --color-elive-surface: #ffffff;
   --color-elive-surface-soft: #f3f5f8;
-  --color-elive-surface-dark: #0f2248;
+  --color-elive-surface-dark: #161943;
 
   --color-elive-success: #12b981;
   --color-elive-shadow: rgba(15, 35, 76, 0.08);
@@ -111,8 +111,8 @@ ol[role="list"] {
 ========================= */
 body {
   background:
-    radial-gradient(circle at top left, rgba(37, 70, 140, 0.05), transparent 22%),
-    radial-gradient(circle at top right, rgba(243, 154, 31, 0.05), transparent 20%),
+    radial-gradient(circle at top left, rgba(0, 122, 178, 0.06), transparent 22%),
+    radial-gradient(circle at top right, rgba(255, 152, 0, 0.06), transparent 20%),
     var(--color-elive-light);
   color: var(--color-elive-text);
   font-family: "Creato Display", system-ui, -apple-system, BlinkMacSystemFont,
@@ -256,7 +256,7 @@ textarea:focus,
 select:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(243, 154, 31, 0.12);
+  box-shadow: 0 0 0 4px rgba(255, 152, 0, 0.12);
 }
 
 /* =========================
@@ -272,7 +272,7 @@ select:focus {
 ========================= */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(37, 70, 140, 0.35) transparent;
+  scrollbar-color: rgba(22, 25, 67, 0.35) transparent;
 }
 
 *::-webkit-scrollbar {
@@ -285,12 +285,12 @@ select:focus {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgba(37, 70, 140, 0.28);
+  background: rgba(22, 25, 67, 0.28);
   border-radius: 999px;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: rgba(37, 70, 140, 0.42);
+  background: rgba(22, 25, 67, 0.42);
 }
 
 /* =========================
