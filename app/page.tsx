@@ -284,7 +284,7 @@ export default function HomePage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#007AB2]/88 to-[#161943]/72" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#161943]/95 via-[#161943]/88 to-[#161943]/72" />
           </div>
 
           <div className="relative px-6 py-16 md:px-10 md:py-20 lg:px-14 lg:py-24">
