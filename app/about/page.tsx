@@ -275,7 +275,7 @@ export default function AboutPage() {
                 eLive helps businesses, institutions, and event organizers communicate better through messaging, event technology, branding, creative design, and professional media support.
               </motion.p>
 
-              <motion.div variants={fadeUp} className="mt-9 flex flex-wrap gap-4">
+              <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-xl bg-[var(--color-elive-accent)] px-7 py-4 text-base font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
