@@ -248,7 +248,7 @@ export default function BulkSmsPage() {
             Flexible Bulk SMS
           </span>
           <span className="block max-w-[760px] text-[var(--color-elive-accent)]">
-            for Promotions, Alerts, Reminders & Customer Updates
+            Business Communication at Scale
           </span>
         </motion.h1>
 
@@ -256,9 +256,7 @@ export default function BulkSmsPage() {
           variants={fadeUp}
           className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
         >
-          Reach your audience quickly through a professional bulk messaging
-          solution built for business communication, campaign delivery,
-          alerts, reminders, and customer engagement.
+          Send promotions, alerts, reminders, and customer updates through a professional bulk messaging solution built for fast, reliable communication.
         </motion.p>
 
         <motion.div
