@@ -245,7 +245,7 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(243,154,31,0.08),transparent_26%)]" />
           </div>
 
-          <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-6 py-14 md:min-h-[600px] md:px-10 lg:px-14">
+          <div className="relative mx-auto flex min-h-[520px] max-w-7xl items-center px-5 py-14 md:min-h-[600px] md:px-8 lg:px-10">
             <motion.div
               className="max-w-3xl"
               initial="hidden"
@@ -260,17 +260,17 @@ export default function AboutPage() {
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-7 max-w-[760px] text-[2.4rem] font-normal leading-[1.06] tracking-[-0.03em] md:text-[3rem] lg:text-[54px]"
+                className="mt-7 max-w-[720px] text-[2.2rem] font-normal leading-[1.07] tracking-[-0.025em] md:text-[2.75rem] lg:text-[50px]"
               >
                 <span className="block text-white">Technology, Communication & Creative Solutions</span>
-                <span className="mt-2 block text-[var(--color-elive-accent)]">
+                <span className="mt-2 block text-[0.92em] text-[var(--color-elive-accent)]">
                   Built Around Your Business
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={fadeUp}
-                className="mt-7 max-w-xl text-base leading-8 text-white/90 md:text-lg"
+                className="mt-7 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
               >
                 eLive helps businesses, institutions, and event organizers communicate better through messaging, event technology, branding, creative design, and professional media support.
               </motion.p>
