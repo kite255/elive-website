@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import EventsShowcase from "@/components/events-showcase";
 import {
   ArrowRight,
   BadgeCheck,
@@ -266,7 +267,7 @@ export default function CardsAndTicketsPage() {
                 variants={fadeUp}
                 className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
               >
-                eLive Card
+                eLive Events
               </motion.p>
 
               <motion.h1
@@ -274,10 +275,10 @@ export default function CardsAndTicketsPage() {
                 className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
               >
                 <span className="block text-white">
-                  Smart Cards and Tickets
+                  Registration, Cards & Tickets
                 </span>
                 <span className="block text-[var(--color-elive-accent)]">
-                  for Invitations, RSVP, and QR Verification
+                  One Complete Event Experience
                 </span>
               </motion.h1>
 
@@ -285,9 +286,7 @@ export default function CardsAndTicketsPage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/90 md:text-lg"
               >
-                Manage invitations, guest responses, ticket delivery, and
-                attendee verification through a more structured and professional
-                digital event experience.
+                Manage event registration, digital invitation cards, ticket sales, attendee communication, QR check-in, and reporting through eLive.
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
@@ -295,7 +294,7 @@ export default function CardsAndTicketsPage() {
     href="/contact"
     className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-7 py-3 text-sm font-semibold !text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[var(--color-elive-accent-dark)]"
   >
-    Request Cards & Tickets
+    Start Your Event
     <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" />
   </Link>
 
@@ -310,7 +309,7 @@ export default function CardsAndTicketsPage() {
     href="#event-features"
     className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3 text-sm font-semibold !text-white backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/15"
   >
-    View Features
+    Explore Services
   </Link>
 </motion.div>
             </motion.div>
@@ -323,9 +322,9 @@ export default function CardsAndTicketsPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr,1.05fr] lg:items-center">
           <Reveal>
             <SectionIntro
-              eyebrow="Cards & Tickets Overview"
-              title="A Structured Way to Manage Invitations and Attendee Access"
-              description="Our Cards and Tickets solution helps event organizers improve invitation delivery, RSVP handling, ticket distribution, and entry verification."
+              eyebrow="Event Management Overview"
+              title="From Registration and Invitations to Tickets and Check-in"
+              description="eLive supports the attendee journey from registration and invitations through ticketing, communication, QR entry, and post-event reporting."
             />
           </Reveal>
 
@@ -333,20 +332,18 @@ export default function CardsAndTicketsPage() {
   <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_45px_rgba(15,35,76,0.06)] md:p-10">
     
     <h3 className="text-2xl font-black leading-tight text-[#143066] md:text-3xl">
-      Built for invitations, confirmations, tickets, and guest flow
+      Built for registration, invitations, tickets, and attendee flow
     </h3>
 
     <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600 md:text-[17px]">
-      Whether you are managing a private celebration or a corporate
-      function, eLive Card helps you coordinate attendees with clarity,
-      speed, and a more structured event experience.
+      Whether you are managing a private celebration, conference, concert, church event, or corporate function, eLive helps you coordinate attendees with clarity, speed, and one connected event experience.
     </p>
 
     <div className="mt-8 grid gap-4">
       {[
-        "Professional digital invitations",
-        "Simple RSVP and attendance tracking",
-        "QR-based ticket and entry verification",
+        "Online registration and attendee management",
+        "Professional digital invitation cards and RSVP",
+        "Ticket sales, QR verification, and attendance reporting",
       ].map((item) => (
         <div
           key={item}
@@ -374,8 +371,8 @@ export default function CardsAndTicketsPage() {
           <Reveal>
             <SectionIntro
               eyebrow="Core Features"
-              title="What the Cards and Tickets Solution Supports"
-              description="Designed for better guest communication, event coordination, and attendee verification."
+              title="Everything You Need to Manage Your Event Audience"
+              description="Registration, cards, ticketing, communication, QR check-in, and reporting in one coordinated service."
               align="center"
             />
           </Reveal>
@@ -408,7 +405,8 @@ export default function CardsAndTicketsPage() {
         </div>
       </section>
 
-     
+
+      <EventsShowcase />
 
       {/* SERVICE COVERAGE */}
 <section className="px-4 py-16 md:px-6 lg:px-8 lg:py-24">
@@ -537,7 +535,7 @@ export default function CardsAndTicketsPage() {
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionIntro
-              eyebrow="Why eLive Card"
+              eyebrow="Why eLive"
               title="A Better Experience for Organizers and Attendees"
               description="This solution improves how events are presented, managed, and verified."
               align="center"
@@ -575,7 +573,7 @@ export default function CardsAndTicketsPage() {
           <Reveal>
             <SectionIntro
               eyebrow="Use Cases"
-              title="Cards and Tickets for Different Event Types"
+              title="Registration, Cards and Tickets for Different Event Types"
               description="A flexible solution for both social and professional event environments."
               align="center"
             />
