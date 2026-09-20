@@ -128,7 +128,7 @@ export default function ELiveCardsGallery() {
                           )}`}
                           target="_blank"
                           rel="noreferrer"
-                          className="mt-3 inline-flex items-center gap-2 rounded-full bg-[var(--color-elive-accent)] px-4 py-2 text-xs font-bold text-white transition hover:bg-[var(--color-elive-accent-dark)]"
+                          className="mt-3 elive-btn elive-btn-primary"
                         >
                           Order This Design
                           <MessageCircle size={14} />
