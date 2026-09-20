@@ -263,14 +263,14 @@ export default function MultimediaPage() {
             >
               <motion.p
                 variants={fadeUp}
-                className="text-sm font-medium uppercase tracking-[0.22em] text-[var(--color-elive-accent)]"
+                className="text-4xl font-extrabold uppercase tracking-[0.22em] text-[var(--color-elive-accent)] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:leading-[1.03] lg:tracking-[-0.035em]"
               >
                 Multimedia Solutions
               </motion.p>
 
               <motion.h1
                 variants={fadeUp}
-                className="mt-5 text-4xl font-medium leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
+                className="mt-5 text-4xl font-extrabold leading-tight md:text-5xl lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em] lg:leading-[1.05] lg:text-[52px] lg:leading-[1.03] lg:tracking-[-0.035em]"
               >
                 <span className="block text-white">
                   Professional Multimedia for Every Event
