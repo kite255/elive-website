@@ -262,8 +262,8 @@ export default function AboutPage() {
                 variants={fadeUp}
                 className="mt-7 max-w-[720px] text-[2.2rem] font-normal leading-[1.06] tracking-[-0.025em] md:text-[2.75rem] lg:text-[52px]"
               >
-                <span className="block text-white">Technology, Communication & Creative Solutions</span>
-                <span className="mt-2 block text-[0.92em] text-[var(--color-elive-accent)]">
+                <span className="block font-normal text-white">Technology, Communication & Creative Solutions</span>
+                <span className="mt-2 block text-[0.92em] font-normal text-[var(--color-elive-accent)]">
                   Built Around Your Business
                 </span>
               </motion.h1>
