@@ -299,10 +299,10 @@ export default function HomePage() {
                 className="text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.02]"
               >
                 <span className="block text-white">
-                  Helping Businesses and Events
+                  Smart Solutions for Communication & Events
                 </span>
                 <span className="mt-2 block text-[var(--color-elive-accent)]">
-                  Connect, Impress & Engage
+                  Built to Help You Connect & Grow
                 </span>
               </motion.h1>
 
@@ -310,9 +310,7 @@ export default function HomePage() {
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-base leading-8 text-white/85 md:text-lg"
               >
-                We deliver communication, event, branding, and media solutions
-                that help organizations operate professionally and engage their
-                audiences with confidence.
+                From messaging and event technology to branding and media, eLive helps organizations communicate clearly, manage experiences professionally, and engage audiences with confidence.
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
