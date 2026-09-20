@@ -242,13 +242,13 @@ export default function BulkSmsPage() {
 
         <motion.h1
           variants={fadeUp}
-          className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[64px] lg:leading-[1.05]"
+          className="mt-5 text-4xl font-black leading-tight md:text-5xl lg:text-[58px] lg:leading-[1.06]"
         >
           <span className="block text-white">
             Flexible Bulk SMS
           </span>
-          <span className="block text-[var(--color-elive-accent)]">
-            for Promotions, Alerts, Reminders, and Customer Updates
+          <span className="block max-w-[760px] text-[var(--color-elive-accent)]">
+            for Promotions, Alerts, Reminders & Customer Updates
           </span>
         </motion.h1>
 
