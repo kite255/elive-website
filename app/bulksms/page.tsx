@@ -214,11 +214,16 @@ export default function BulkSmsPage() {
   
      {/* HERO */}<section className="px-4 pt-5 md:px-6 lg:px-8 lg:pt-7">
   <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[var(--color-elive-primary)] shadow-[0_32px_90px_rgba(20,48,102,0.18)]">
-    <div className="absolute inset-0 bg-gradient-to-r from-[#161943] via-[#007AB2] to-[#161943]" />
-    <div className="absolute -right-24 -top-32 h-[420px] w-[420px] rounded-full bg-white/10 blur-3xl" />
-    <div className="absolute bottom-[-180px] left-[28%] h-[360px] w-[360px] rounded-full bg-[#007AB2]/35 blur-3xl" />
-    <div className="absolute right-[8%] top-[18%] h-32 w-32 rounded-full border border-white/10" />
-    <div className="absolute right-[17%] top-[37%] h-56 w-56 rounded-full border border-white/10" />
+    <div className="absolute inset-0">
+      <Image
+        src="/hero.jpg"
+        alt="eLive bulk SMS"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+    </div>
 
     <div className="relative px-6 py-14 md:px-10 md:py-18 lg:px-14 lg:py-20">
       <motion.div
