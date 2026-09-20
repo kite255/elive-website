@@ -42,7 +42,7 @@ export default function ELiveCardsGallery() {
   }, [activeCategory]);
 
   return (
-    <main className="min-h-screen bg-[#F7F8FA] text-[#24324A]">
+    <main className="min-h-screen bg-[#F7F8FA] text-[#161943]">
      
       {/* FILTERS */}
       <section className="px-4 py-10 md:px-6 lg:px-8">
@@ -115,7 +115,7 @@ export default function ELiveCardsGallery() {
                       {category}
                     </div>
 
-                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#0B1730]/95 via-[#0B1730]/25 to-transparent p-5 opacity-0 transition duration-300 group-hover:opacity-100">
+                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#161943]/95 via-[#161943]/25 to-transparent p-5 opacity-0 transition duration-300 group-hover:opacity-100">
                       <div>
                         <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
                           <Eye size={14} />
@@ -138,7 +138,7 @@ export default function ELiveCardsGallery() {
                   </div>
 
                   <div className="p-5">
-                    <h3 className="line-clamp-2 text-base font-bold text-[#24324A]">
+                    <h3 className="line-clamp-2 text-base font-bold text-[#161943]">
                       {title}
                     </h3>
 
