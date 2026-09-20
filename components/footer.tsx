@@ -14,7 +14,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#0B1730] text-white">
+    <footer className="relative overflow-hidden bg-[#161943] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,70,140,0.22),transparent_42%)]" />
 
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-10 md:grid-cols-3 md:px-6 lg:px-8">
@@ -37,15 +37,15 @@ export default function Footer() {
           <Link
             href="https://wa.me/255777792017"
             target="_blank"
-            className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-white transition hover:border-[#f39a1f] hover:bg-white/5"
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-white transition hover:border-[#FF9800] hover:bg-white/5"
           >
-            <MessageCircle size={16} className="text-[#f39a1f]" />
+            <MessageCircle size={16} className="text-[#FF9800]" />
             WhatsApp
           </Link>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.15em] !text-[#f39a1f]">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.15em] !text-[#FF9800]">
             Quick Links
           </h3>
 
@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.15em] !text-[#f39a1f]">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.15em] !text-[#FF9800]">
             Contact
           </h3>
 
@@ -98,7 +98,7 @@ function ContactItem({
 }) {
   return (
     <div className="flex items-start gap-3">
-      <Icon size={16} className="mt-1 shrink-0 text-[#f39a1f]" />
+      <Icon size={16} className="mt-1 shrink-0 text-[#FF9800]" />
       <p className="leading-5">{children}</p>
     </div>
   );
